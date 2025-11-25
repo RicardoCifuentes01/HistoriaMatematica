@@ -1,1 +1,891 @@
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Historia de las Matemáticas</title><style>:root{--bg:#fff8e6;--card:#fff3db;--text:#3b2b00;--muted:#6b4f00;--accent1:#f6b800;--accent2:#ff7a18;--nav:#ffd27a}body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased;line-height:1.4}header{position:sticky;top:0;background:linear-gradient(90deg,var(--nav),transparent);backdrop-filter:blur(6px);z-index:50;border-bottom:1px solid rgba(0,0,0,0.04)}.container{max-width:1100px;margin:0 auto;padding:16px}nav{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:10px;font-weight:700;font-size:18px}.menu-toggle{display:none;background:none;border:0;font-size:20px;padding:8px;border-radius:8px}.nav-links{display:flex;gap:10px;align-items:center}a.nav-link{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--text);font-weight:600}a.nav-link:hover{background:rgba(0,0,0,0.04)}.btn{padding:8px 12px;border-radius:8px;border:0;font-weight:600;cursor:pointer}#darkToggle{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#2b1600}main{padding:28px 12px}.hero{display:grid;grid-template-columns:1fr 360px;gap:20px;align-items:center;padding:24px;border-radius:14px;background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.3));box-shadow:0 6px 18px rgba(0,0,0,0.06)}.hero h1{margin:0;font-size:28px;color:var(--accent2)}.hero p{margin-top:12px;color:var(--muted)}.hero img{width:100%;height:auto;border-radius:10px;display:block;object-fit:cover;max-height:320px}.section{margin-top:36px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{background:var(--card);padding:12px;border-radius:12px;box-shadow:0 6px 14px rgba(0,0,0,0.04);display:flex;flex-direction:column;align-items:stretch}.card img{width:100%;height:220px;object-fit:cover;border-radius:8px}.card h3{margin:12px 0 6px 0}.card p{flex:1;color:var(--muted);margin:0 0 12px 0}.card .ver{align-self:center;padding:8px 12px;border-radius:8px;border:0;background:var(--accent1);color:#2b1600;cursor:pointer;font-weight:700}.resources{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.resource img{width:100%;height:160px;object-fit:cover;border-radius:8px}.resource .verRe{display:inline-block;margin-top:10px;padding:8px 12px;border-radius:8px;border:0;background:var(--accent2);color:white;text-decoration:none;font-weight:700}.magacin iframe{width:100%;height:400px;border-radius:10px;border:0}.credits{background:linear-gradient(180deg,rgba(255,255,255,0.6),transparent);padding:18px;border-radius:12px}.footer{margin-top:18px;padding:18px;text-align:center;color:var(--muted);font-size:14px}.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);display:none;align-items:center;justify-content:center;padding:20px;z-index:200}.modal{background:var(--bg);width:min(900px,98%);max-height:90vh;border-radius:12px;padding:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 10px 30px rgba(0,0,0,0.25)}.modal .head{display:flex;align-items:center;gap:12px;justify-content:space-between}.modal .head img{width:100px;height:100px;object-fit:cover;border-radius:8px}.modal .body{overflow:auto;padding-top:12px}.close-btn{background:none;border:0;font-size:18px;cursor:pointer;padding:8px}.hidden{display:none}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}/* Responsive */@media(max-width:1000px){.hero{grid-template-columns:1fr 280px}.cards{grid-template-columns:repeat(2,1fr)}.resources{grid-template-columns:1fr}}@media(max-width:720px){.menu-toggle{display:inline-block}.nav-links{position:fixed;right:12px;top:62px;background:var(--bg);flex-direction:column;padding:12px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,0.12);display:none}.nav-links.show{display:flex}.hero{grid-template-columns:1fr;gap:14px}.hero img{order:2}.cards{grid-template-columns:1fr}.resources{grid-template-columns:1fr}.magacin iframe{height:240px}}/* Dark mode variables */body.dark{--bg:#0b1020;--card:#0f1730;--text:#e6eefb;--muted:#c8d6f6;--accent1:#6a7bff;--accent2:#7a3cff;--nav:#14203b}body.dark a.nav-link{color:var(--text)}body.dark a.nav-link:hover{background:rgba(255,255,255,0.02)}body.dark .card{box-shadow:0 6px 18px rgba(7,10,30,0.6)}body.dark .hero{background:linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))}/* small helpers */.flex{display:flex;align-items:center;gap:8px}.logo-dot{width:12px;height:12px;border-radius:4px;background:var(--accent2)}</style></head><body><header><div class="container"><nav><div class="brand"><span class="logo-dot" aria-hidden="true"></span><div>Historia de las Matemáticas</div></div><button class="menu-toggle btn" aria-controls="primary-nav" aria-expanded="false" id="menuBtn">☰</button><div id="primary-nav" class="nav-links" role="navigation"><a class="nav-link" href="#inicio">Inicio</a><a class="nav-link" href="#biografias">Biografías</a><a class="nav-link" href="#recursos">Recursos Digitales</a><a class="nav-link" href="#magacin">Magacín</a><a class="nav-link" href="#creditos">Créditos</a><button id="darkToggle" class="btn" aria-pressed="false">Modo oscuro</button></div></nav></div></header><main class="container"><section id="inicio" class="section hero" aria-labelledby="titulo-inicio"><div><h1 id="titulo-inicio">Historia de las Matemáticas</h1><p>Este blog está dedicado a explorar la historia de las matemáticas y a resaltar el legado de los grandes pensadores que transformaron la ciencia y la sociedad. Aquí encontrarás biografías, recursos digitales y programas en formato magacín que buscan acercar la matemática a todos de una manera creativa, visual y entretenida. Nuestro objetivo es mostrar que las matemáticas no son solo números, sino también historias, descubrimientos y personajes que dejaron huella en la humanidad.</p></div><div><img id="heroImg" src="./img/inicio.png" alt="Imagen de bienvenida"></div></section><section id="biografias" class="section" aria-labelledby="bio-title"><h2 id="bio-title">Biografías</h2><div class="cards" role="list"><div class="card" role="listitem"><img src="./img/tales.jpg" alt="Tales de Mileto"><h3>Tales de Mileto</h3><p>Filósofo y matemático jónico considerado uno de los Siete Sabios de Grecia. (Breve descripción).</p><button class="ver" data-person="tales">Ver más</button></div><div class="card"><img src="./img/zenon.jpg" alt="Zenón de Elea"><h3>Zenón de Elea</h3><p>Filósofo griego conocido por sus paradojas sobre el movimiento y la infinitud. (Breve descripción).</p><button class="ver" data-person="zenon">Ver más</button></div><div class="card"><img src="./img/arquimedes.jpg" alt="Arquímedes de Siracusa"><h3>Arquímedes de Siracusa</h3><p>Matemático e ingeniero famoso por sus contribuciones a la geometría, la hidrostática y la mecánica. (Breve descripción).</p><button class="ver" data-person="arquimedes">Ver más</button></div><div class="card"><img src="./img/galileo.jpg" alt="Galileo Galilei"><h3>Galileo Galilei</h3><p>Científico italiano que desarrolló importantes aportes a la física y la astronomía. (Breve descripción).</p><button class="ver" data-person="galileo">Ver más</button></div></div></section><section id="recursos" class="section" aria-labelledby="rec-title"><h2 id="rec-title">Recursos Digitales</h2><div class="resources"><div class="resource card"><img src="./img/rc1.png" alt="Recurso 1"><h3>Tales de Mileto y Zenón de Elea</h3><a class="verRe" href="https://prezi.com/view/CB4ncxKOMoWy0VcFNvZw/?referral_token=gPCIeVlnB3FN" target="_blank" rel="noopener">Ver recurso</a></div><div class="resource card"><img src="./img/rc2.png" alt="Recurso 2"><h3>Arquímedes de Siracusa y Galileo Galilei</h3><a class="verRe" href="https://prezi.com/view/u92cqyYS8TYjAtfQ7IbA/?referral_token=6A4BQ9lnB3FN" target="_blank" rel="noopener">Ver recurso</a></div></div></section><section id="magacin" class="section" aria-labelledby="mag-title"><h2 id="mag-title">Magacín: Historias que Cuentan Números</h2><p>En esta sección encontrarás programas tipo magacín donde exploramos la vida y aportes de grandes matemáticos a través de entrevistas creativas y narrativas audiovisuales</p><div class="magacin"><iframe width="560" height="315" src="https://www.youtube.com/embed/KgL9G3s7uEk" title="Magacín video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><iframe width="560" height="315" src="https://www.youtube.com/embed/bIYOh5wulqY" title="Magacín video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div></section><section id="creditos" class="section" aria-labelledby="cred-title"><h2 id="cred-title">Créditos</h2><div class="credits"><p>Este blog ha sido desarrollado de manera colaborativa por el grupo académico 551104_32 de la UNAD, en el marco del curso Historias de las Matemáticas.</p><p>Cada integrante del grupo aportó en la construcción de biografías, recursos digitales y programas magacín, con el propósito de divulgar la importancia de la historia de las matemáticas y sus protagonistas.</p></div><div class="footer">© II Semestre, 2025 Matemáticas con Historia  Versión de Prueba 1.2<br>Grupo académico 551104_32 – Curso: Historias de las Matemáticas</div></section></main><!-- Modal --> <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-hidden="true"><div class="modal" role="document"><div class="head"><div style="display:flex;gap:12px;align-items:center"><img id="modalImg" src="" alt=""><div><h3 id="modalName"></h3></div></div><div><button class="close-btn" id="closeModal" aria-label="Cerrar biografía">✕</button></div></div><div class="body" id="modalBody" tabindex="0"><!-- Biografía completa irá aquí --></div></div></div><script>(()=>{const menuBtn=document.getElementById('menuBtn');const nav=document.getElementById('primary-nav');menuBtn.addEventListener('click',()=>{const expanded=menuBtn.getAttribute('aria-expanded')==='true';menuBtn.setAttribute('aria-expanded',String(!expanded));nav.classList.toggle('show');});document.querySelectorAll('.nav-link').forEach(l=>{l.addEventListener('click',e=>{e.preventDefault();const id=l.getAttribute('href').slice(1);document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});if(window.innerWidth<=720){nav.classList.remove('show');menuBtn.setAttribute('aria-expanded','false');}})});const darkToggle=document.getElementById('darkToggle');const heroImg=document.getElementById('heroImg');const body=document.body;const DARK_IMG_PATH='./img/inicioOscuro.png';const LIGHT_IMG_PATH='./img/inicio.png';function setDark(on){if(on){body.classList.add('dark');darkToggle.textContent='Modo claro';darkToggle.setAttribute('aria-pressed','true');heroImg.src=DARK_IMG_PATH;}else{body.classList.remove('dark');darkToggle.textContent='Modo oscuro';darkToggle.setAttribute('aria-pressed','false');heroImg.src=LIGHT_IMG_PATH;}}darkToggle.addEventListener('click',()=>{setDark(!body.classList.contains('dark'));});/* Biografías modal */const modal=document.getElementById('modal');const modalImg=document.getElementById('modalImg');const modalName=document.getElementById('modalName');const modalBody=document.getElementById('modalBody');const closeModal=document.getElementById('closeModal');const bios={tales:{name:'Tales de Mileto',img:'./img/tales.jpg',bio:'Tales, nació en la ciudad de Mileto perteneciente en aquel entonces a Grecia, en la región jónica (actualmente en Turquía) en el año 626/625 a.C. Durante la vida de Tales, Mileto estaba gobernada por el tirano Trasíbulo, quién impulso las posiciones políticas de aristócratas conservadores y burgueses banqueros de la ciudad, lo que dio por consecuencia una abundante actividad económica con Egipto, Crotona y Síbaris, e indirectamente con la red de comercio de Babilonia y Caldea. Es sabido que Tales de Mileto viajo a Egipto, Caldea y Babilonia, de donde llevo múltiples conocimientos matemáticos a Grecia, donde aplicó lo aprendido y lo impulso a desarrollar enunciados más elaborados o complementar ya existentes. <br><br> En el año 585 a.C., Tales logró predecir el eclipse solar que lo doto de basto reconocimiento y que casualmente detuvo una batalla entre lidios y medos. Bernabé y San Miguel (1988, 2006) coinciden en que, con los conocimientos desarrollados en Babilonia, antes de la trasmisión de estos, de probabilidades de posibles eventos basados en registros anteriores, es la forma en como Tales realizo la predicción del eclipse. <br><br> Ante los grandes cambios impulsados por el comercio marítimo, en Mileto nace la necesidad de organizar la sociedad de una manera racional e investigar como realizar las exploraciones con mayor precisión y facilidad, llaman sabios a quienes precisan las formas de adquirir estos nuevos conocimientos, de entre ellos se encuentra Tales, quien fue el primero de los Siete Sabios Griegos. Tales participo activamente en la política de Mileto mediante consejos, decisiones y aportes al desarrollo de militares. Tales, funda la primera escuela de Mileto con el objetivo de abarcar las necesidades de pensamiento, llevando a sus integrantes - dentro del cual se resalta Anaximandro como discípulo de Tales - a estudiar la astronomía náutica, cartografía y la geometría. Es de precisar en este punto la realización filosófica de Tales en la cosmología, pues dio al agua el papel de elemento fundamental del origen del universo y a la materia como ajena al sentido estricto de ser inerte.<br><br>Los nuevos desafíos náuticos requirieron el uso de diferentes instrumentos astronómicos llegados desde Caldea, como el pólos que usaban para fijar la ubicación de los astros y entre otros instrumentos que calculaban rutas de navegación. Tales de Mileto conoce esos instrumentos y les da un fundamento geométrico que explica su funcionamiento y por qué de precisión. El uso del razonamiento para encontrar el por qué, excluyendo el mito como explicación, dio el título en Tales como el primer filosofo, buscando exponer la naturaleza como origen y causa. A partir de esta forma de pensamiento, Tales realiza demostraciones de teoremas matemáticos utilizando métodos deductivos, entre los teoremas demostrados están:<br><br>Los ángulos opuestos por el vértice son iguales.<br><br>El trazo de un diámetro divide al círculo en dos partes iguales.<br><br>Cuando varias rectas paralelas interceptan dos rectas transversales, los segmentos que se forman sobre estas últimas son proporcionales entre sí.<br><br>Dado dos triángulos, en el que uno de ellos tiene dos ángulos y un lado iguales al otro triángulo, entonces son triángulos congruentes.<br><br>Un ángulo inscrito en una semicircunferencia es un ángulo recto.<br><br>Los ángulos de la base de un triángulo isósceles son iguales.<br><br>Como evidencia de estos trabajos matemáticos están los escritos por Eudemo de Rodas (320 a.C.) que, aunque perdidos, parte de la información fue salvada por Proclo (410- 485). Además, los escritos de Diógenes Laercio relatan las habilidades matemáticas de Tales al medir la altura de las pirámides de Guiza por medio de las sombras proyectadas. Cabe recalcar la influencia de los conocimientos ya formados por egipcios y babilonios en estas hazañas geométricas de Tales. No se puede afirmar que inspiraron sus teoremas, pero sí están en relación.<br><br>Persia, que era amenaza desde hace varios años para Mileto, donde Tales participo en le decisión de rechazo de un enfrentamiento bélico con los persas, logra la irrupción en la región por parte de Ciro y su general Harpago, buscando dominar la región jonia, marcando así el fin del apogeo económico, político y científico de Mileto, coincidiendo con los últimos años de Tales, donde algunos pasajes aislados relatan su muerte en Tenedos en el 546 a.C.'},zenon:{name:'Zenón de Elea',img:'./img/zenon.jpg',bio:'Zenón nació a principios del siglo V a.C. en la colonia griega Elea – actualmente ubicada en el sur de Italia –. Parménides, habitante de Elea, fundo la escuela Eleática, que divulgaba la filosofía monista que consistía en la realidad como una, constante y no divisible, saber nacido del intelecto puro y aislado de la experiencia. Siendo una idea contradecía por otros pensadores de la época al apoyarse en el cambio notable de la naturaleza y sus composiciones, su discípulo, Zenón, debate mediante el reductio ad absurdum los argumentos contrarios al monismo en una serie de paradojas que se recogen en su obra Epicheiremata, reflejando algo más que un soporte a Parménides es más una refutación al cambio de la realidad. El método deductivo usado por Zenón, en base a conclusiones contrarias hace que Aristóteles lo titule como le padre de la dialéctica y evidenciando ser uno de los primeros lógicos. Para este punto, se conoce a Zenón como ciudadano activo políticamente desempeñándose como pensador de labor por su posición en la escuela de Elea.<br><br>Aproximadamente a mitad del siglo V, Zenón causa un profundo impacto en Sócrates que lo conoce en un viaje conjunto con Parménides a Atenas. Platón, maestro del ateniense, describe la visita entorno a debates filosóficos, reconoce fama en la ciudad por la obra realizada por Zenón y sus célebres paradojas. Se describe en los escritos de Parménides de Platón, a un Zenón que apoya el monismo, rechazando la multiplicidad de sustancias. Algo de lo que difiere Aristóteles, sin definirlo como prularista o monista, sino más como un diverso lógico ambivalente que fue duramente contrario a las ideas de Parménides y sus opositores.<br><br>Dentro de las paradojas más relevante y que han logrado sobrevivir a nuestros días se resaltan varias, como el argumento de lo grande y lo pequeño establece que, si las cosas son muchas pueden ser grandes o pequeñas, algo pequeño que no tiene tamaño no altera a algo más grande si se añade, entonces no es nada, por otra parte si algo tiene tamaño se puede dividir en partes que poseen tamaño, si se dividen infinitamente implica que las partes poseen tamaño – son grandes – y son ilimitadas, este argumento se centra en la posibilidad de completar los procesos de división más no en la totalidad de las partes. Estos son argumentos que, desde la perspectiva de la filosofía de Parménides, sostiene el monismo.<br><br>La dicotomía es otra paradoja que consiste en la división del argumento en dos partes opuestas, si se quiere llegar hasta la línea de meta desde la salida, primero hay que llegar a la mitad del camino, luego a la mitad de lo que queda y así sucesivamente, esto conduce a atravesar un número ilimitado de secciones lo cual hace al movimiento imposible. Aristóteles por otra parte, reflexiona sobre esta paradoja en que el tiempo también es divisible y se puede recorrer un número infinito de secciones en un tiempo finito.<br><br>Una variación de la dicotomía es la famosa paradoja de Aquiles, que menciona a Aquiles como el corredor más veloz respecto a otro que tiene una ventaja inicial, donde Aquiles debe estar en el mismo punto de partida que el corredor más lento, pero este habrá recorrido más distancia para llegar a un nuevo punto, donde Aquiles se posicionara nuevamente, estas etapas se repiten continuamente. Aquiles llega a un punto donde estaba el corredor más lento, pero este ya habrá avanzado un poco más, así Aquiles nunca lo alcanzará. Algo que nuevamente aborda Aristóteles, resuelve que es una interpretación errada al interpretar que el corredor más lento siempre estará delante de Aquiles, pero el alcance que deberá realizar Aquiles está restringido al tiempo en el cual Aquiles no alcanza al corredor más lento, lo que eventualmente conduce a que las distancias se reduzcan y supere en un tiempo finito al más lento.<br><br>Otra paradoja de Zenón es de la flecha en un vuelo, que establece que un cuerpo en cada instante ocupa un espacio igual a sí mismo, por lo tanto, está en reposo y de ser así nunca se mueve. <br><br>De entre otra de sus famosas paradojas está la del Estadio o filas en movimiento, en la que hay tres conjuntos de cuerpos, el primero consta de cuatro cuerpos en reposo, el segundo conjunto de cuatro cuerpos en movimiento hacía la derecha y el tercero de igual cantidad de cuerpos se mueve en sentido contrario al anterior, ambos se mueven paralelamente al conjunto inicial en reposo. El movimiento e intervalo mínimo de tiempo es aquel en el que el movimiento respecto al conjunto en reposo representa la variación de posición de un solo cuerpo en ambos conjuntos que se desplazan. En un momento dado, cuando los tres cuerpos estén alineados, el primer cuerpo del tercer conjunto habrá recorrido dos unidades de cuerpo respecto al segundo conjunto, pero no se puede recorrer en un solo instante el doble de tiempo lo que concluye que la mitad del tiempo es igual al doble del tiempo. Aristóteles menciona el error en suponer que moverse junto a algo en reposo toma el mismo tiempo que moverse junto a algo que también se mueve.<br><br>Estas paradojas evidencian la alta capacidad de argumentación deductiva y razonamiento que había logrado Zenón, paradojas que pudieron relacionarse con el descubrimiento de los números inconmensurables y sentaron las bases de la dialéctica. Dicha habilidad jugo en su contra en su vida política, al pensar en conspirar en la caída del tirano de Elea, Nearco, quien lo condeno a tortura y muerte en el año 430 a.C., Diógenes Laercio relata haber atestiguado su muerte que fue aceptada por Zenón con valentía y heroísmo.'},arquimedes:{name:'Arquímedes de Siracusa',img:'./img/arquimedes.jpg',bio:'Arquímedes fue hijo del astrónomo Fidias del cuál pudo surgir el temprano interés del siracusano por la Matemática, Geometría, Física y Astronomía, nació en el 287 a.C. en Siracusa, ciudad ubicada en la isla de Sicilia al sur de Italia, entonces bajo influencia y el estado de Grecia, la ciudad estaba gobernada por el tirano Herón (o Hierón) II de Siracusa (306 a.C. – 215 a.C.) quién fue íntimo amigo y posible pariente de Arquímedes, lo fue así tanto que dedico su obra Arenario a Gelón, hijo de Herón. Roma, en pleno auge expansionista de su imperio, se moviliza hacia el oriente y el sur, por lo que Cartago, aliado posterior de Siracusa, ofrece resistencia.<br><br>Arquímedes en sus primeros años de formación viaja a la ciudad de Alejandría en Egipto, donde adquiere su realización matemática de la mano de pensadores importantes en la materia como Eratóstenes, quién era director de la biblioteca de Alejandría, y otros discípulos de Euclides, con quienes mantuvo contacto posteriormente a lo largo de su vida. Más tarde, allí en Egipto, emplea un invento atribuido a él para el riego de los cultivos que, a modo de un tornillo helicoidal giratorio dentro de un cilindro inclinado, es capaz de elevar agua mediante el giro del eje del aparato. Posteriormente regresa a Siracusa con una afición amplia por la Física y la Matemática, en especial por la Geometría.<br><br>En este punto, Arquímedes interpretó un rol de ingeniero militar utilizando su gran ingenio y comprensión física, algo que Herón II tomaría para sus consejos, estrategias y guías para las defensas de Siracusa, desempeñándose así Arquímedes dentro de la aristocracia y gobierno de la ciudad. Arquímedes realiza múltiples acontecimientos como la botadura de un navío con la fuerza de su brazo, apoyado con poleas y palancas, de donde surge la clásica frase escrita en una carta al tirano de Siracusa: “Dadme una palanca suficientemente larga, un punto de apoyo y moveré la Tierra”. Durante las campañas bélicas que posteriormente se producirían en Siracusa por estar aliada con Cartago, diseña la garra o manus ferrea como arma de defensa contra los barcos romanos, que permitía levantarlos por medio de poleas para luego soltarlos violentamente contra el agua, haciendo que se hundieran. Su amplio conocimiento sobre palancas hace que tenga atribuida la ley de la palanca, desarrollada por él bajo principios estáticos – en contraste a los peripatéticos – en la que se postula, a modo práctico de ejemplo de la idea en cuestión para esta lectura, un sistema simétrico en el que una palanca carga tres pesos iguales repartidos en los extremos y en el fulcro ubicado a mitad de la palanca, manteniéndose estable. <br><br>Otro principio físico que logra establecer es acerca de la hidrostática de los cuerpos que dicta que un cuerpo en un líquido se sumerge a medida que desplaza una cantidad de líquido de la misma cantidad de peso que el objeto que se sumerge, escrito en su tratado Sobre los Cuerpos Flotantes. Este conocimiento lo utilizo en una anécdota relatada por Vitruvio, arquitecto bajo el mando del emperador Augusto, en la que se relata que Herón consagro una corona de oro a los dioses, pero en su sospecha por honradez del orfebre y la fiabilidad de ser completamente del material encargado, puso a prueba la corona desafiando la mente de Arquímedes, quien ideo la forma de determinar si era pura o corrupta. Arquímedes decide sumergirla en agua para conocer la cantidad de agua desplazada, de forma semejante lo hizo con porciones de oro puro para imitar el peso de la corona, al desplazarse más agua en el caso de la corona que las piezas de oro se descubrió que la corona no era pura en oro. Historias, relatos y anécdotas que son puestas en duda en algunos aspectos por la posible tergiversación a lo largo de los años y exageración de los hechos, pero que sin duda caracterizan a Arquímedes con habilidades e intelecto único para su época.<br><br>A pesar de sus grandes hazañas prácticas, desde las escrituras de Plutarco, se describe a Arquímedes con un interés más correspondiente a sus obras matemáticas que sus logros mecánicos, pues para él fascinación radicaba en la generalidad o principios que gobernaban los fenómenos.<br><br>Respecto a sus obras, han llegado a nuestros días gracias a un manuscrito griego recogido en el siglo XVI que logró sobrevivir a lo largo de los siglos que es reproducción de otro. Dos de sus obras están estrechamente relacionadas con el Cálculo Integral e, implícitamente en este, el concepto de límite que se maneja en nuestros días. Uno de ellos se centra en hallar la razón entre la longitud de una circunferencia y su diámetro, respecto al primero calcula el perímetro de un polígono regular inscrito en la circunferencia y realiza el cociente con su diámetro. Repetidamente realiza el proceso con un polígono regular de mayores lados hasta que asemeje la forma de la circunferencia, otorgando una aproximación al número π al lograr restringirlo a un rango de valores. Inmediatamente, aplicando el concepto de área al procedimiento descrito anteriormente – denominado método de exhaución, que es de autoría de Eudoxo de Cnido–, es decir, inscribiendo un polígono regular que aumenta de lados sucesivamente hasta que su área se asemeje a la de un círculo, se obtiene el área del mismo. Otro uso del método fue realizado en las medidas de la parábola, específicamente la determinación de un segmento o área, inscribiendo varios segmentos que se aproximen a la forma de la parábola o polígonos inscritos, sea el caso respectivo. Dentro de los procesos necesarios, Arquímedes usaba métodos babilónicos para obtener raíces y medias aritméticas (Boyer, 1986). También logra determinar el área de un círculo como igual al área de un triángulo rectángulo en los que sus catetos son la medida de la circunferencia dada y su radio.<br><br>En otro de sus trabajos, logra dar el procedimiento de trisección del ángulo bajo la idea de espiral – que, aunque nombrada con su nombre, da autoría de este elemento a Conon de Alejandría (Boyer, 1986) –, que consistía en movimientos uniformes de una semirrecta que gira en torno a uno de sus extremos y mientras otro punto de la semirrecta la recorre desde su origen, resultando en una espiral. También, proporciona la relación entre el volumen de una esfera y un cilindro, siendo esta primero dos partes de tres del volumen del cilindro que lo circunscribe. Bajo esta rama de cuerpos también determina la superficie de una esfera como cuatro veces su círculo mayor.<br><br>Estos trabajos esconden un manera precisa y singular de pensar de Arquímedes que fue descubierta en 1906 gracias a un pergamino del siglo X, que él mismo título como El Método y está a forma de cartas dirigidas a Eratóstenes con proposiciones matemáticas con la particularidad en cómo ejecuta la realización de sus demostraciones al tener en cuenta el objetivo de la misma de manera prestablecida, lo que hoy conoceríamos como tesis al momento de realizar una demostración.<br><br>Entre otros de sus trabajos se encuentran volúmenes de poliedros, razonamientos aritméticos como la arenario, centros de gravedad de polígonos y cuerpos, óptica y astronomía. (Parra, 2008). Respecto a la astronomía se sabía que construía planetarios o simulaciones del movimiento de los planetas. (Boyer, 1986).<br><br>Tras la caída de Cartago, Siracusa es asediada entre los años 214 y 212 a.C., último año de vida de Arquímedes que es donde invento sus más famosas máquinas de guerra. Plutarco relata que el general romano Marcelo habría dado orden de perdón a la vida de los habitantes. Al momento de la irrupción en la ciudad, un soldado romano acude a Arquímedes para llevarlo ante su general, el siracusano sin estar enterado de la invasión, se rehúsa a marcharse, no sin antes finalizar una demostración matemática, por lo que es asesinado por el soldado ante la negativa, desobedeciendo a su general. Muere así Arquímedes a los 75 años y se cumple su última voluntad que es tallar en su tumba una esfera y un cilindro.'},galileo:{name:'Galileo Galilei',img:'./img/galileo.jpg',bio:'Florencia, capital administrativa y cultural del ducado de la Toscana en el siglo XVI, plena época caracterizada por el renacimiento de los saberes de la antigüedad. El ducado acogía importantes ciudades como Pisa, ciudad portuaria importante que vio nacer en el año 1564 del músico Vicenzo Galilei y Giulia Ammannati a uno de seis hijos, Galileo Galilei, familia que posteriormente se mudaría a la capital toscana para impulsar los estudios de Galileo a los 15 años, bajo tutoría privada e impartición religiosa en el monasterio Vallombrosa. Dada las condiciones culturales de la época, renacimiento humanista, su aprendizaje en esta primera etapa de su vida y posteriores habrán sido en base al desarrollo humano. Esto se basaba en diferentes habilidades como la gramática, literatura, filosofía e historia desde el entendimiento de los conocimientos grecorromanos guiados por el razonamiento humano, lo que impulsaría la reflexión y estudio de estos temas por medio de espacios creados y conocidos como universidades. Vicenzo vería un gran potencial en su hijo para la medicina, lo que lo impulsa a regresar a Pisa para que su hijo estudiase en el 1581 en la universidad de la ciudad. <br><br> A pesar de la negativa de Galileo por los estudios médicos, logró encontrar una dirección a sus intereses en las matemáticas y la física. Lo que hace que reemplace a sus 20 años de edad sus estudios por geometría y fenómenos naturales como el movimiento pendular. Posterior a sus estudios matemáticos sin culminar formalmente, realiza estudios sobre la caída de los objetos e hidrostática, con lo que una reputación y demostración de conocimientos, obtiene el título de profesor en la Universidad de Pisa. En base a estos estudios, cuestiona fuertemente el pensamiento Aristotélico, algo sensible en tiempos en que abundaban peripatéticos en la Iglesia Católica y en el mundo académico. A modo de ejemplo, Galileo determina que la caída de los objetos por la acción de una aceleración gravitacional no depende de la masa de los mismos – según anécdotas demostró en la torre inclinada de Pisa – y realiza estudios sobre el movimiento de los péndulos mediante experimentación, determinando la ley del péndulo relacionado con el isocronismo del péndulo en el que establece periodo, amplitud y aceleración en el movimiento pendular. <br><br> También realizo estudios sobre la dinámica de objetos cayendo por medio de planos para establecer las relaciones entre las velocidades de estos y sus trayectorias. Por medio de estos trabajos logra cuantificar el valor de la aceleración gravitacional. Gracias a estos estudios logra plantear posteriormente en 1604 las leyes del movimiento acelerado. Se debe resaltar que en sus esbozos, estudios e interpretaciones de estos fenómenos aplico la geometría para reintroducirla como fundamento y materia auxiliar para la construcción de la explicación de estos fenómenos. Es el caso del péndulo y de los planos inclinados, la relevancia geométrica es significativa al considerar la variación de ángulos y curvas, respectivamente. <br><br> Estas acciones contrarias a los pensamientos aristotélicos, sumado a una personalidad irónica y de aptitud para el debate, hacen que deba cambiar de universidad en 1592 a la Universidad de Padua. Allí adquiere fama al ser catalogado como excelso en su profesión de docente en materias de física, ingeniería y astronomía, fue este tiempo descrito como la mejor época de su vida personal. Libero aún más sus habilidades de escritura con diversos manuscritos sobre técnicas mecánicas. Además, brindó varias conferencias e incluso tutorías privadas, haciéndolo más reconocido. <br><br> Después de varios trabajos con enfoques militares y mecánicos hizo un estudio geométrico sobre el área bajo un arco de la curva cicloide, descrita como la curva formada por el movimiento de un punto de una circunferencia que rueda con velocidad uniforme sobre un plano horizontal. Realizó una aproximación bastante cerca pero no segura de su parte a dicha área, como un área posiblemente menor a tres veces el área de la circunferencia que produce la curva, algo que sería estudiado posteriormente por matemáticos franceses, italianos y su discípulo Evangelista Torricelli. <br><br> Más tarde, en el 1597 construye un compás geométrico militar que fue ampliamente comercializado generándole ingresos significativos, se usaba por ingenieros en estos ámbitos de artillería para hacer cálculos mentales con mayor facilidad. Dicho compás, en una de sus aplicaciones permite la división de un segmento en una cantidad deseada de partes iguales, algo que podía emplearse en el cambio de escala de dibujos e inclusive cálculos de interés compuesto. <br><br> En esta misma época Galileo mantiene correspondencia con Johannes Kepler donde expresaba su respaldo a la teoría formulada por Copérnico respecto al movimiento de los astros. En 1604 se abre debate respecto al modelo geocentrista y heliocentrista planteado inicialmente por Nicolás Copérnico. En el primero se comprendía el universo junto con las estrellas era inmutable, donde la tierra era el centro y los errantes giraban alrededor de él. En el modelo copernicano, los planetas giraban alrededor del Sol. Galileo en vista de demostrar la teoría heliocentrista, construye en Padua un telescopio usando cristales nuevos y desarrollados en Holanda para la observación de objetos distantes en mar, solo que Galileo apuntaría los lentes al cielo nocturno, logrando configurarlo para ampliar hasta 30 veces la imagen de los cuerpos. Conocimiento que compartió con fuerzas marítimas militares de Venecia y le valdría un puesto vitalicio en la universidad de Padua. De entre otros inventos a resaltar hechos por Galileo se destacan el microscopio compuesto (1624) y un termómetro con la ayuda sobre la comprensión del cambio de la densidad de los líquidos en función a la temperatura (1606). <br><br> En el libro Sidereus Nuncios (El mensajero sideral, traducido a varios idiomas) que le otorgo de aún más fama imprimió grandes descubrimientos como que la Luna no era una esfera perfecta, pues tenía montañas, colinas y cráteres. Encontró cuerpos orbitando a Júpiter – lunas galileanas – y estudio las fases de Venus que podían ser explicadas solo con el modelo heliocentrista. El libro entró en conflicto con una Iglesia Católica dirigida por el Papa Urbano VIII, que, aunque daba signos de amistad con Galileo, dio órdenes explicitas de tratar con especulación sus descubrimientos, lo que haría que se cohibiera de realizar nuevos comentarios públicos. <br><br> Aun así, realizó años después una nueva publicación titulada Dialogo sobre los dos principales sistemas mundiales, ptolemaico y copernicano en 1632. Dejaba implícito la teoría ptolemaica como errada. En su obra de 1638, Las dos nuevas ciencias, acerca de la dinámica, demuestra con precisión matemática que el movimiento de un proyectil que es afectado verticalmente por una aceleración traza una trayectoria en forma de parábola, dando una nueva aplicación a esta curva de las secciones cónicas después de varios siglos. <br><br> En vista de la rebeldía de Galileo contra a los conocimientos apoyados por la Iglesia, esta organización incluyó el libro dentro de la lista de escritos prohibidos al poco tiempo de la publicación como reprimenda inicial para luego iniciar un juicio contra Galileo por desobedecer las ordenes papales. Fue encontrado culpable de estar contra las sagradas escrituras, por lo que se le habría condenado a la privación de su libertad sin posibilidad de visitas ni con permisos de realizar la publicación de su último libro. Poco antes de su muerte, con sus discípulos Viviani y Torricelli realizan esbozos sobre el reloj de péndulo. Más tarde, muere en Arcetri a los 78 años, bajo la misma condena injusta y atroz de la Iglesia Católica, solitario y ciego en 1642. Aun así, años después, su legado perduraría con el tiempo y varias mentes brillantes posteriores resignificarían el valor de sus trabajos para darle el nuevo título de padre de la ciencia moderna.'}};document.querySelectorAll('.ver').forEach(btn=>{btn.addEventListener('click',()=>{const key=btn.getAttribute('data-person');const data=bios[key];if(!data)return;modalImg.src=data.img;modalImg.alt=data.name;modalName.textContent=data.name;modalBody.innerHTML=data.bio;modal.style.display='flex';modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';modalBody.focus();});});function closeBio(){modal.style.display='none';modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}closeModal.addEventListener('click',closeBio);modal.addEventListener('click',e=>{if(e.target===modal)closeBio();});document.addEventListener('keydown',e=>{if(e.key==='Escape' && modal.style.display==='flex')closeBio();});/* Ensure modal body scrolls if content long */modalBody.style.maxHeight='70vh';modalBody.style.overflowY='auto';/* Resource 2 placeholder - left empty as requested */document.getElementById('rec2link').addEventListener('click',e=>{e.preventDefault();alert('Enlace no asignado todavía.');});/* Improve contrast in dark mode for images inside cards */const observer=new MutationObserver(()=>{document.querySelectorAll('.card img').forEach(i=>{i.style.filter=body.classList.contains('dark')?'brightness(0.95) contrast(1.05)':''});});observer.observe(document.body,{attributes:true,attributeFilter:['class']});})();</script></body></html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Historia de las Matemáticas</title>
+    <style>
+        :root {
+            --bg: #fff8e6;
+            --card: #fff3db;
+            --text: #3b2b00;
+            --muted: #6b4f00;
+            --accent1: #f6b800;
+            --accent2: #ff7a18;
+            --nav: #ffd27a
+        }
+
+        body {
+            margin: 0;
+            font-family: Inter, system-ui, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            -webkit-font-smoothing: antialiased;
+            line-height: 1.4
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(90deg, var(--nav), transparent);
+            backdrop-filter: blur(6px);
+            z-index: 50;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.04)
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 16px
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 18px
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 0;
+            font-size: 20px;
+            padding: 8px;
+            border-radius: 8px
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 10px;
+            align-items: center
+        }
+
+        a.nav-link {
+            padding: 8px 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600
+        }
+
+        a.nav-link:hover {
+            background: rgba(0, 0, 0, 0.04)
+        }
+
+        .btn {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 0;
+            font-weight: 600;
+            cursor: pointer
+        }
+
+        #darkToggle {
+            background: linear-gradient(90deg, var(--accent1), var(--accent2));
+            color: #2b1600
+        }
+
+        main {
+            padding: 28px 12px
+        }
+
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr;
+            /* por defecto en móviles: imagen arriba, texto abajo */
+            gap: 20px;
+            align-items: center;
+            padding: 24px;
+            border-radius: 14px;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.3));
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        }
+
+
+
+        .hero h1 {
+            margin: 0;
+            font-size: 28px;
+            color: var(--accent2)
+        }
+
+        .hero p {
+            margin-top: 12px;
+            color: var(--muted)
+        }
+
+        .hero img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            display: block;
+            object-fit: cover;
+            max-height: 320px;
+        }
+
+
+
+        .section {
+            margin-top: 36px;
+            scroll-margin-top: 100px;
+        }
+
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px
+        }
+
+        .card {
+            background: var(--card);
+            padding: 12px;
+            border-radius: 12px;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: stretch
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px
+        }
+
+        .card h3 {
+            margin: 12px 0 6px 0
+        }
+
+        .card p {
+            flex: 1;
+            color: var(--muted);
+            margin: 0 0 12px 0
+        }
+
+        .card .ver {
+            align-self: center;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 0;
+            background: var(--accent1);
+            color: #2b1600;
+            cursor: pointer;
+            font-weight: 700
+        }
+
+        .resources {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px
+        }
+
+        .resource img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 8px
+        }
+
+        .resource .verRe {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 0;
+            background: var(--accent2);
+            color: white;
+            text-decoration: none;
+            font-weight: 700
+        }
+
+        .magacin iframe {
+            width: 100%;
+            height: 400px;
+            border-radius: 10px;
+            border: 0
+        }
+
+        .credits {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), transparent);
+            padding: 18px;
+            border-radius: 12px
+        }
+
+        .footer {
+            margin-top: 18px;
+            padding: 18px;
+            text-align: center;
+            color: var(--muted);
+            font-size: 14px
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 200
+        }
+
+        .modal {
+            background: var(--bg);
+            width: min(900px, 98%);
+            max-height: 90vh;
+            border-radius: 12px;
+            padding: 18px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25)
+        }
+
+        .modal .head {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: space-between
+        }
+
+        .modal .head img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px
+        }
+
+        .modal .body {
+            overflow: auto;
+            padding-top: 12px
+        }
+
+        .close-btn {
+            background: none;
+            border: 0;
+            font-size: 18px;
+            cursor: pointer;
+            padding: 8px
+        }
+
+        .hidden {
+            display: none
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0
+        }
+
+        /* Responsive */
+        @media(max-width:1000px) {
+            .hero {
+                grid-template-columns: 60% 1fr;
+                /* imagen ocupa 60%, texto 40% */
+            }
+
+            .hero img {
+                max-height: none;
+                /* permite que la imagen se expanda */
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr)
+            }
+
+            .resources {
+                grid-template-columns: 1fr
+            }
+        }
+
+        @media(max-width:720px) {
+            .menu-toggle {
+                display: inline-block
+            }
+
+            .nav-links {
+                position: fixed;
+                right: 12px;
+                top: 62px;
+                background: var(--bg);
+                flex-direction: column;
+                padding: 12px;
+                border-radius: 10px;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+                display: none
+            }
+
+            .nav-links.show {
+                display: flex
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                gap: 14px
+            }
+
+            .hero img {
+                order: 2
+            }
+
+            .cards {
+                grid-template-columns: 1fr
+            }
+
+            .resources {
+                grid-template-columns: 1fr
+            }
+
+            .magacin iframe {
+                height: 240px
+            }
+        }
+
+        /* Dark mode variables */
+        body.dark {
+            --bg: #0b1020;
+            --card: #0f1730;
+            --text: #e6eefb;
+            --muted: #c8d6f6;
+            --accent1: #6a7bff;
+            --accent2: #7a3cff;
+            --nav: #14203b
+        }
+
+        body.dark a.nav-link {
+            color: var(--text)
+        }
+
+        body.dark a.nav-link:hover {
+            background: rgba(255, 255, 255, 0.02)
+        }
+
+        body.dark .card {
+            box-shadow: 0 6px 18px rgba(7, 10, 30, 0.6)
+        }
+
+        body.dark .hero {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01))
+        }
+
+        /* small helpers */
+        .flex {
+            display: flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .logo-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 4px;
+            background: var(--accent2)
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="brand"><span class="logo-dot" aria-hidden="true"></span>
+                    <div>Historia de las Matemáticas</div>
+                </div><button class="menu-toggle btn" aria-controls="primary-nav" aria-expanded="false"
+                    id="menuBtn">☰</button>
+                <div id="primary-nav" class="nav-links" role="navigation">
+                    <a class="nav-link" href="#inicio">Inicio</a>
+                    <a class="nav-link" href="#biografias">Biografías</a>
+                    <a class="nav-link" href="#recursos">Recursos</a>
+                    <a class="nav-link" href="#magacin">Magacín</a>
+                    <a class="nav-link" href="#historia-matematica">Historia de la Matemática</a>
+                    <a class="nav-link" href="#creditos">Contacto</a><button id="darkToggle" class="btn"
+                        aria-pressed="false">Modo oscuro</button>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="container">
+        <section id="inicio" class="section hero" aria-labelledby="titulo-inicio">
+            <div><img id="heroImg" src="./img/inicio.png" alt="Imagen de bienvenida"></div>
+            <div>
+                <h1 id="titulo-inicio">Historia de las Matemáticas</h1>
+                <p>¡Bienvenido al lugar donde las matemáticas guardan huellas del pasado y cada número revela una
+                    historia!</p>
+
+                <p>Este espacio nace con la convicción de que las matemáticas no son únicamente un conjunto de fórmulas
+                    abstractas, sino un relato vivo que ha acompañado a la humanidad en cada etapa de su desarrollo.
+                    Aquí exploramos cómo las ideas matemáticas han viajado a través de imperios, desafiado dogmas y
+                    transformado la manera en que pensamos, organizamos la sociedad y comprendemos el universo.</p>
+
+                <p>Desde los enigmas escritos en los papiros egipcios hasta la audacia intelectual que dio origen al
+                    análisis infinitesimal, cada entrada es una invitación a mirar las matemáticas con ojos nuevos, como
+                    un puente entre culturas, épocas y formas de pensamiento.</p>
+
+                <p>Nos detenemos en preguntas que han fascinado a generaciones:</p>
+                <ul>
+                    <li>¿Cómo concebían los griegos el infinito y por qué lo discutían como un misterio filosófico?</li>
+                    <li>¿De qué manera la geometría se convirtió en el pilar de la matemática antigua y en la base de la
+                        arquitectura del conocimiento?</li>
+                    <li>¿Cuál es el origen del número cero y cómo una ausencia se transformó en la clave de la
+                        modernidad?</li>
+                    <li>¿Cómo una simple cuenta abrió el camino hacia la invención del cálculo, cambiando para siempre
+                        la ciencia y la tecnología?</li>
+                </ul>
+
+                <p>Este blog está pensado para quienes sienten que detrás de cada símbolo late una idea brillante, una
+                    cultura que se transformó y una mente que se atrevió a pensar diferente. Aquí las matemáticas se
+                    presentan como relatos, como memoria y como aventura intelectual.</p>
+
+                <p>Pero no nos limitamos a los textos:</p>
+                <ul>
+                    <li>Encontrarás programas tipo magacín dedicados a las biografías de grandes matemáticos, narrados
+                        con un estilo cercano y dinámico, que muestran no solo sus descubrimientos sino también sus
+                        luchas personales, sus contextos históricos y las pasiones que los impulsaron.</li>
+                    <li>Dispondrás de un escrito sobre la historia de la matemática, que recorre sus raíces desde las
+                        primeras civilizaciones hasta los debates contemporáneos, ofreciendo una visión panorámica y
+                        crítica de su evolución.</li>
+                    <li>Tendrás acceso a recursos digitales en forma de presentaciones que acompañan las biografías,
+                        diseñadas para que estudiantes, docentes y curiosos puedan visualizar mejor los contextos y
+                        aportes de cada figura, convirtiendo la historia en una experiencia didáctica y accesible.</li>
+                </ul>
+
+                <p>Además, este espacio busca ser un lugar de encuentro entre la reflexión académica y la divulgación
+                    cultural. Aquí podrás:</p>
+                <ul>
+                    <li>Conectar ideas que parecen distantes pero que forman parte de un mismo hilo histórico.</li>
+                    <li>Descubrir paradojas que desafían la lógica y despiertan la imaginación.</li>
+                    <li>Reconocer cómo las matemáticas han sido motor de cambios sociales, filosóficos y tecnológicos.
+                    </li>
+                    <li>Dejarte sorprender por la belleza de las matemáticas como lenguaje universal de la humanidad.
+                    </li>
+                </ul>
+
+                <p>Cada publicación es una invitación a detenerse, a pensar y a dialogar con las voces del pasado.
+                    Porque las matemáticas no son estáticas: son memoria viva, son cultura, son aventura intelectual.
+                </p>
+
+                <p>Prepárate para recorrer un camino donde cada número cuenta una historia, cada símbolo abre una puerta
+                    y cada idea nos recuerda que pensar diferente es la verdadera esencia del conocimiento.</p>
+
+            </div>
+
+        </section>
+        <section id="biografias" class="section" aria-labelledby="bio-title">
+            <h2 id="bio-title">Biografías</h2>
+            <div class="cards" role="list">
+                <div class="card" role="listitem"><img src="./img/tales.jpg" alt="Tales de Mileto">
+                    <h3>Tales de Mileto</h3>
+                    <p>Filósofo y matemático jónico considerado uno de los Siete Sabios de Grecia. (Breve descripción).
+                    </p><button class="ver" data-person="tales">Ver más</button>
+                </div>
+                <div class="card"><img src="./img/zenon.jpg" alt="Zenón de Elea">
+                    <h3>Zenón de Elea</h3>
+                    <p>Filósofo griego conocido por sus paradojas sobre el movimiento y la infinitud. (Breve
+                        descripción).</p><button class="ver" data-person="zenon">Ver más</button>
+                </div>
+                <div class="card"><img src="./img/arquimedes.jpg" alt="Arquímedes de Siracusa">
+                    <h3>Arquímedes de Siracusa</h3>
+                    <p>Matemático e ingeniero famoso por sus contribuciones a la geometría, la hidrostática y la
+                        mecánica. (Breve descripción).</p><button class="ver" data-person="arquimedes">Ver más</button>
+                </div>
+                <div class="card"><img src="./img/galileo.jpg" alt="Galileo Galilei">
+                    <h3>Galileo Galilei</h3>
+                    <p>Científico italiano que desarrolló importantes aportes a la física y la astronomía. (Breve
+                        descripción).</p><button class="ver" data-person="galileo">Ver más</button>
+                </div>
+                <div class="card"><img src="./img/descartes.jpg" alt="René Descartes">
+                    <h3>René Descartes</h3>
+                    <p>Filósofo y matemático francés considerado el padre de la filosofía moderna y creador de la
+                        geometría analítica. (Breve
+                        descripción).</p><button class="ver" data-person="descartes">Ver más</button>
+                </div>
+                <div class="card"><img src="./img/newton.jpg" alt="Isaac Newton">
+                    <h3>Isaac Newton</h3>
+                    <p>Fue un físico y matemático inglés que formuló las leyes del movimiento, la
+                        gravitación universal y desarrolló el cálculo.
+                        (Breve
+                        descripción).</p><button class="ver" data-person="newton">Ver más</button>
+                </div>
+            </div>
+        </section>
+        <section id="recursos" class="section" aria-labelledby="rec-title">
+            <h2 id="rec-title">Recursos Digitales</h2>
+            <div class="resources">
+                <div class="resource card"><img src="./img/rc1.png" alt="Recurso 1">
+                    <h3>Tales de Mileto y Zenón de Elea</h3><a class="verRe"
+                        href="https://prezi.com/view/CB4ncxKOMoWy0VcFNvZw/?referral_token=gPCIeVlnB3FN" target="_blank"
+                        rel="noopener">Ver recurso</a>
+                </div>
+                <div class="resource card"><img src="./img/rc2.png" alt="Recurso 2">
+                    <h3>Arquímedes de Siracusa y Galileo Galilei</h3><a class="verRe"
+                        href="https://prezi.com/view/u92cqyYS8TYjAtfQ7IbA/?referral_token=6A4BQ9lnB3FN" target="_blank"
+                        rel="noopener">Ver recurso</a>
+                </div>
+                <div class="resource card"><img src="./img/rc3.png" alt="Recurso 3">
+                    <h3>René Descartes e Isaac Newton</h3><a class="verRe"
+                        href="https://prezi.com/view/NnZ7Q39h0TSq9W973cbC/?referral_token=gPCIeVlnB3FN" target="_blank"
+                        rel="noopener">Ver recurso</a>
+                </div>
+                <div class="resource card"><img src="./img/rc4.png" alt="Recurso 4">
+                    <h3>Historia de las Matemáticas</h3><a class="verRe"
+                        href="https://prezi.com/view/vO9V02Xf2IeN2gRz7Wrw/?referral_token=gPCIeVlnB3FN" target="_blank"
+                        rel="noopener">Ver recurso</a>
+                </div>
+            </div>
+        </section>
+        <section id="magacin" class="section" aria-labelledby="mag-title">
+            <h2 id="mag-title">Magacín: Historias que Cuentan Números</h2>
+            <p>En esta sección encontrarás programas tipo magacín donde exploramos la vida y aportes de grandes
+                matemáticos a través de entrevistas creativas y narrativas audiovisuales</p>
+            <div class="magacin">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/KgL9G3s7uEk" title="Magacín video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bIYOh5wulqY" title="Magacín video 2"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen=""></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/CMsOWPZNMSY" title="Magacín video 3"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen=""></iframe>
+            </div>
+        </section>
+        <section id="historia-matematica" class="section">
+            <h2 class="section-title">Historia de la Matemática</h2>
+            <h3>Abstract</h3>
+            <p>
+                The history of mathematics begins with the human need to count and compare things in the environment.
+                From early attempts to count food portions to using fingers, the idea of numbers emerged as a natural
+                experience. Ancient cultures like the Egyptians and Babylonians developed number systems and applied
+                mathematics to agriculture, astronomy, and geometry. Egyptians used unit fractions and geometric
+                calculations, while Babylonians introduced positional notation in base 60 and a primitive concept of
+                zero.
+                Thales of Miletus marked a turning point by using logical geometric proofs. Pythagoras and his followers
+                connected mathematics with philosophy, studied regular solids, and discovered irrational numbers. Plato
+                formalized mathematical concepts and promoted analytical methods. Euclid, through his work The Elements,
+                laid the foundations of geometry, while Archimedes and Apollonius made progress in calculating areas,
+                volumes, and conic curves. This golden age ended with Diophantus and Pappus, who worked on algebra and
+                geometric problems.
+                Mathematics flourished in India with the Aryabhatiya, which introduced the positional decimal system and
+                later the symbol for zero. Contributions from the Mayans and other cultures are also recognized. In the
+                Arab world, Al-Khwarizmi wrote Al-jabr wa’l muqabalah, which gave rise to modern algebra. The Arabic
+                culture adopted the Hindu-Arabic numeral system, which spread to Europe thanks to Fibonacci. In the 13th
+                century, the rise of universities and technological advances boosted applied mathematics in navigation,
+                mapmaking, and time measurement.
+                In the Modern Age, Regiomontanus and Napier advanced algebra and logarithms. Descartes created analytic
+                geometry, combining algebra and geometry. Newton and Leibniz developed calculus, each with different
+                approaches, Newton focused on physics, while Leibniz emphasized geometry. Euler formalized mathematical
+                analysis and contributed to number theory, functions, and notation. Jacques Bernoulli introduced
+                probability theory and the law of large numbers, while other mathematicians explored limits, series, and
+                three-dimensional geometry.
+                The French Revolution led to the creation of the metric system and descriptive geometry. Mathematicians
+                like Gauss, Cauchy, Lobachevsky, Bolyai, and Riemann transformed geometry and analysis, moving toward
+                abstraction. Algebra became more structural and abstract, and mathematical logic was integrated thanks
+                to Boole and De Morgan. Hilbert proposed a complete axiomatization of mathematics, but Gödel showed its
+                limitations with his incompleteness theorems. Mathematics has become a coherent and universal structure.
+                Today, mathematics has become more connected to technology and everyday life. Today, it plays a key role
+                in areas like artificial intelligence, big data analysis, digital security, and system simulations.
+                Thanks to computers, calculations that were once impossible can now be done easily. New fields are being
+                explored, such as topology, networks, and applied mathematics for solving real-world problems. Although
+                it remains an abstract science, mathematics is now also a powerful tool for understanding and improving
+                the modern world.</p>
+            <h3>Historia de las Matemáticas</h3>
+            <h4>Edad Antigua</h4>
+            <p>La interacción entre el hombre de la antigüedad y la naturaleza, junto con su necesidad de supervivencia
+                y de una búsqueda de bienestar constante, lo llevo a realizar ejercicios mentales en los que se requería
+                aprender de diversas formas de contrastación entre elementos de una misma especie y la comparación con
+                otras externas. Tal es el caso de contar las raciones de comida y la comparación con el conteo de los
+                dedos, asociando y abstrayendo el contar y la forma. Desde aquí, nace el concepto de número como una
+                forma de experiencia relacionada directamente con la naturaleza y el sentir del ser humano. Este proceso
+                se fusiono con la lengua hasta dónde el concepto de número se desarrolló aún más hasta el punto en que
+                las palabras puedan distinguir dualmente entre uno y muchos. Estos conteos y abstracciones eran básicos,
+                los conteos realizados eran bajos y el simple hecho de la multiplicidad de elementos más allá de cinco o
+                diez, se entendía como muchos.<br><br>
+                Las culturas fueron evolucionando en base a sus necesidades, el desarrollo de la matemática y las
+                habilidades en sus integrantes respondieron a estas. Más allá de simples procesos de conteos, se amplió
+                el uso de las matemáticas a procesos como calendarios, mediciones astronómicas y de terrenos para la
+                agricultura. La antigua civilización egipcia realizo procesos aún más complejos con operaciones en base
+                a un sistema decimal, en las que se evidenciaban procesos de divisiones por medio de fracciones
+                unitarias y operaciones entre estas, problemas de tipo algebraicos con características y desarrollos
+                aritméticos, problemas geométricos que planteaban desde ya el área de un círculo, áreas de triángulos y
+                enunciados trigonométricos que ya se desarrollaban en torno al 2000 a.C. Pruebas de estos avances se
+                encuentran en el papiro de Ahmes, donde también se desarrolla la escritura hierática que introducía
+                cifras y signos para representar dígitos e incluso potencias de diez, lo que reemplazaba la acumulación
+                de símbolos para representar cifras. Se puede destacar en este periodo un desarrollo principalmente en
+                torno a la aritmética y la operación de suma como base en la cual apoyar la matemática. <br><br>
+                De forma paralela a los egipcios, los babilonios representaban de forma similar la escritura de los
+                números agrupando los símbolos en uno mayor que podía representar los números enteros. Pero, los
+                babilonios diseñaron una manera diferente de representar el 60 por características, como la facilidad de
+                escritura o innovación, esto marco una diferencia radical, pues aquí surge la numeración posicional como
+                herramienta que permitía escribir cualquier número entero por más grande que fuese de la forma en que lo
+                hacemos hoy en día. La posición relativa de cada número se encargaba de indicar la cantidad de veces que
+                fuese mayor que la posición anterior. Para este caso, la posición a la izquierda del número de la
+                derecha, para los babilonios, era 60 veces más. La ausencia de cantidad en una posición relativa fue
+                solucionada con una cuña inclinada, símbolos usados por los babilónicos en la escritura numérica, para
+                representar una idea ambigua de cero, aun así, hasta allí se limita este concepto, pues no se encuentran
+                registros de este símbolo usado a la aproximación de lo que entendemos como cero actualmente.<br><br>
+                En torno al siglo VI a.C., los babilonios ya habían desarrollado y aplicado las matemáticas a diversos
+                problemas, tanto geométricos como astronómicos. Algo de lo que se sospecha es que Tales de Mileto en la
+                región Jónica, aprendió a realizar y demostrar teoremas geométricos en base a círculos, división de
+                ángulos e igualdad de triángulos, e incluso a predecir un eclipse solar en el 585 a.C. Para este
+                entonces, Tales realizo un punto de inflexión en la matemática por sus demostraciones y por su base en
+                la racionalidad. Esta estructuración lógica que empieza a nacer desde la civilización griega e impulsar
+                a los matemáticos posteriores. <br><br>
+                La Matemática, empezaba ser desarrollada bajo la lógica direccionada por el razonamiento, se relacionaba
+                con explicaciones del entorno e incluso de manera religiosa como fue el caso de los pitagóricos que
+                acompañaban a esta disciplina con la filosofía, dándole dotes de principios morales. De hecho, se cree
+                que estas palabras fueron acuñadas por Pitágoras (fundador de los pitagóricos) al cual se le atribuye
+                ser discípulo de Tales y descubridor de la teoría de proporciones y la construcción de solidos regulares
+                (solidos platónicos), según Proclo. Desde este punto, se considera la evolución matemática más allá de
+                la respuesta a los requerimientos sociales, es más la curiosidad por la sabiduría y el entendimiento. Es
+                en esta época donde se sitúa los primeros indicios del razonamiento deductivo, aunque no hay un consenso
+                histórico del nacimiento de este proceso en Tales de Mileto o con los pitagóricos al momento del
+                descubrimiento por parte de ellos de los inconmensurables, que estuvo relacionada con el estudio
+                pitagórico del triángulo rectángulo, números que no pueden ser expresados de manera exacta como
+                proporciones. Se mantiene la sospecha de que este razonamiento pudo ser alimentado por el nacimiento de
+                la dialéctica desarrollada en la antigua Grecia, donde era fundamental para las polis que requerían la
+                argumentación y el razonamiento para defender ideas.<br><br>
+                En el siglo V a.C. la matemática se desarrollaba en torno a los lineamientos pitagóricos, aun así,
+                respondiendo a problemas planteados y principalmente geométricos, como es el caso de los tres problemas
+                clásicos que circulaban en la antigua Grecia. Dentro de estos se halla la cuadratura del círculo, la
+                duplicación del cubo y la trisección del ángulo. Platón tuvo una gran influencia en la educación y bases
+                matemáticas, discutió fundamentos y definiciones como la del punto como un elemento que carece de
+                dimensión, diferenciación de números pares a impares, los sólidos platónicos (cuerpos hechos con caras
+                de polígonos regulares) y el método analítico. En este último, Platón formaliza e indica facilidad en la
+                demostración iniciando por la conclusión que se quiere demostrar. Esto le dio el valor de que su
+                académica fuera en ese entonces el centro matemático en Atenas. De allí surgió el matemático y astrónomo
+                Eudoxo, quien ideó el método de exhaución para encontrar áreas de figuras que circunscriban polígonos
+                con un número mayor de lados dentro de la figura, idea que se aproximaría y se usa hoy en día en cálculo
+                integral. <br><br>
+                Para los siglos IV y III a.C. Ptolomeo, gobernante de la ocupación romana en Egipto, crea en Alejandría
+                un instituto llamado el Museo, dentro de los profesores se hallaba Euclides de Alejandría, autor de
+                diversos tratados en múltiples áreas como astronomía, música, óptica, mecánica, etc, y de la famosa obra
+                titulada Los Elementos, su obra más famosa y que consta de 13 libros sobre los fundamentos de la
+                geometría plana, teoría de números - incluyendo inconmensurables - y geometría de cuerpos. Se
+                acompañaban de definiciones que, en términos de Boyer (1987), son incompletas "Se pueden plantear
+                objeciones fácilmente a otras de las llamadas “definiciones de Euclides, a cuenta de su circularidad
+                lógica". Dentro de estos enunciados se presentan 10 hipótesis, cinco de estos considerados axiomas
+                geométricos con los cuales se fundamentaba las demostraciones y teoremas. Es la más importante obra
+                matemática griega que ha logrado llegar a la actualidad. Ha sufrido variaciones a lo largo de la
+                historia, por las reproducciones necesarias, pero aun así el espíritu matemático de Euclides se conserva
+                y marcó en definitiva la historia de las matemáticas en los años venideros. <br><br>
+                Posterior a Euclides, otros tratados matemáticos geométricos surgieron, como es en el caso de
+                Arquímedes, donde trabajo equilibrio de los planos, la medida del círculo y sobre la esfera y el
+                cilindro. Respecto a la medida del círculo obtuvo una impresionante estimación del número Pi que
+                superaba a los egipcios y babilonios - aunque no se acercaron a la noción actual de Pi como razón -.
+                Existe otro tratado de Arquímedes que influye en gran medida sobre la demostración matemática que él
+                mismo título como el Método, con el que logro realizar grandes avances en la trisección del ángulo (uno
+                de los problemas clásicos), el área de un segmento parabólico, el volumen de un segmento paraboloide, el
+                segmento esférico, la relación entre los volúmenes de la esfera y el cilindro, y el volumen de la
+                esfera. Así, Euclides, Arquímedes y Apolonio resaltan dentro de la Edad de Oro (siglo III a.C.) de la
+                matemática griega, aunque de este último matemático -Apolonio- fueron perdidas varias de sus obras.
+                Llega a nuestros días parte de su obra las Cónicas destacándose como una de las mejores obras junto a
+                los Elementos. En esta obra se abordan la elipse, las parábolas y la hipérbola generadas a partir de un
+                plano inclinado que corta un cono que no necesariamente debe ser recto, se obtienen también en un cono
+                oblicuo o escaleno, logrando unificar las tres curvas bajo un concepto general. Esta época dorada se vio
+                apagada entre el siglo III a.C. y hasta el siglo III d.C., donde posteriormente surgen los últimos
+                matemáticos algebraicos relevantes de la antigua Grecia como Diofanto de Alejandría y Pappus de
+                Alejandría, los cuales trabajaron - en grandes rasgos - resolución de ecuaciones determinadas e
+                indeterminadas y soluciones geométricas a los tres problemas clásicos.<br><br></p>
+            <h4>Edad Media</h4>
+            <p>Luego de la caída del imperio Romano de Occidente en el siglo V, nos trasladamos en el siglo VI a la
+                India. Allí se escribió una de las obras matemáticas más importantes y reconocidas de esta región,
+                recopilación de obras anteriores, llamada Aryabhatiya por Aryabjata. Consta de 123 estrofas carentes de
+                una lógica y metodología generalizada, en la que se busca aportar a las reglas de cálculo en astronomía
+                y medición matemática. Fue un gran compendio de errores y grandes aportes, calificado por algunos
+                matemáticos como Al-Biruni. En esta obra hindú se encontraba información sobre las potencias de diez,
+                cálculo de raíces cuadradas y cúbicas de enteros, cálculo de áreas - algunos erróneos -, medidas de la
+                circunferencia y relación con el número Pi, progresiones aritméticas, proporciones y trigonometría
+                esférica. La obra también aporta el sistema de numeración posicional decimal, reflejo de su uso en la
+                cultura, concedido como lo conocemos hoy en día donde el valor relativo representa diez veces más al que
+                le sigue. Esto marco un punto de inflexión en el sistema de numeración usado en la India, apartando al
+                sistema de numeración usado allí hasta la fecha - Sistema Brahmi que daba un símbolo único para los
+                enteros de 1 al 10 y para las potencias de este último -, lo que hizo que fuese posible una reducción de
+                cifras para ocupar solamente del 1 al 9, para la representación del 10 se usaba el valor posicional. A
+                pesar de este gran avance, faltaba un elemento crucial para trascender el sistema numeración y era la
+                introducción de la simbología para representar la ausencia de valor en una de las posiciones relativas
+                de un número. La aparición de esta idea, el cero como número que acompañaría las nueve cifras, dentro de
+                la matemática india tarda más de dos siglos, en el año 876.<br><br>
+                A pesar de querer atribuir la idea de cero a la India, existen indicios de un posible surgimiento en
+                Alejandría y su posterior adaptación por el sistema decimal que se construyó en la India (Boyer, 1987,
+                p. 277). Además, de que parece un surgimiento independiente en culturas occidentales, en el caso de los
+                mayas en Yucatán - usando un sistema numérico de base vigesimal y de 5 como auxiliar -, y culturas
+                asiáticas. Los mayas usaban un símbolo diverso similar a un ojo semiabierto que representaba las
+                posiciones vacías, lo hindúes usaban la forma redonda de un huevo. Dentro del mayor logro hindú se
+                resalta en haber reunido en su sistema de numeración la base decimal, la notación posicional y la forma
+                simbólica cifrada para los diez numerales dentro del cual está el cero.<br><br>
+                Durante la baja Edad Media (siglo IX), tras la fundación en Bagdad de la Casa de la Sabiduría, una
+                especia de Museo de Alejandría, el matemático y astrónomo Al-Khowarizmi desarrolla su obra más
+                importante titulada “Al-jabr wa'l muqábalah”, de la cual se deriva la palabra “álgebra”. Dentro de la
+                obra se encuentra un nivel más elemental que el desarrollado por Diofanto y principalmente es retorico
+                escribiendo los números en palabras en vez de símbolos numéricos, aun así, su obra se acerca más al
+                concepto moderno de álgebra que otras obras anteriores al tratar desde el fundamento la resolución de
+                ecuaciones cuadráticas de forma exhaustiva siguiendo argumentación lógica con premisas y conclusiones.
+                Por esto se le atribuye a él el título de “Padre del Álgebra”. Posiblemente, tanto la inspiración y
+                apoyo de bases académicas sea influenciado por las tres culturas matemáticas más influyentes que fueron
+                hasta a la fecha, la griega, la Mesopotámica y la India, tomando elementos de estas para realizar las
+                construcciones de su escrito. La cultura árabe en aquel entonces era variada, pues varios extranjeros
+                vivianes en los confines de su territorio, donde habían asimilado la religión y el lenguaje como el
+                común denominador. A pesar de esto, la diversidad cultural trajo conflictos en la escritura matemática,
+                estaba quienes adoptaban la escritura alfabética griega y otros la hindú, adoptada dentro de la cultura
+                árabe para la escritura numérica y la cual predominaría con el paso del tiempo sufriendo ligerezas, esto
+                haría que un correcto nombre para nuestro sistema actual de escritura numérica sea hindú-árabe. (Boyer,
+                1987, p. 307) La divulgación de esta escritura se esparció tanto en escuela, comerciantes y autores
+                -Sacrobosco y Villedieu- del siglo XIII, dentro del cual se encuentra Leonardo de Pisa, comúnmente
+                conocido como Fibonacci. Fibonacci autor de la obra <<Libro del ábaco>>, donde reluciría la relación de
+                    apoyo entre la aritmética y la geometría, recomendaría el uso de los numerales hindú-arábigos siendo
+                    este el principal tema a tratar, puesto que el había tenido contacto con los métodos algebraicos
+                    árabes. De allí se destaca las nueve formas hindúes y el nombre de “zephirum” en árabe para el cero
+                    - de la cuál parte la palabra que usamos hoy en día-. El siglo XIII la fundamentación de las
+                    universidades como la de Bolonia, París, Oxford y Cambridge por medio del humanismo, retomaron la
+                    filosofía y la ciencia, fue un siglo de varios inventos que contribuyeron a la matemática práctica
+                    como la geometría y a su vez, aportando a la cartografía, la navegación y la medición del tiempo,
+                    con el compás de navegación, la brújula y el péndulo.<br><br></p>
+            <h4>Edad Moderna</h4>
+            <p>La asignación de medidas geométricas con las cuáles apoyarse en la construcción y resolución de problemas
+                geométricos, desde la generalización, le permitió a Regiomontano hacer uso de procesos algebraicos
+                elaborados, como el uso de la ecuación cuadrática -aunque lo hizo de forma retorica como lo hizo
+                Al-Khowarizmi, lo que le limitaba su influencia en el álgebra-. De su obra, L Arithmetica, que ocupo un
+                estudio de teoría de números, se publicó hasta 1575 en latín. Esta fue una gran aproximación, lenta de
+                cómo sería la aplicación del álgebra a la geometría.<br><br>
+                Cerca de la mitad del siglo XVI, el matemático John Napier, que escribía en principio principalmente de
+                cálculos numéricos y trigonométricos, desarrollo tablas de multiplicas por medio de varillas y con el
+                uso de reglas mnemotécnicas para recordar fórmulas de trigonometría esférica. Uno de sus aportes más
+                relevantes fue la invención de los logaritmos desde el año 1594, utilizando razonamiento en las
+                sucesiones y geometría, se debe tener en cuenta que el no uso la idea de base de un sistema de
+                logaritmos, lo que hacía que para la época en su desarrollo fuese diferente a como concebimos la idea
+                hoy en día. Publico su trabajo en 1614 bajo el título “Descripción de la maravillosa regla de los
+                logaritmos”. Esta idea fue desarrollada con el objetivo de la facilidad de los cálculos de productos y
+                cocientes de potencias.<br><br>
+                Para el siglo XVII, la organización y comunicación entre matemáticos empezaba a hacerse cada vez más
+                evidente a través de grupos académicos en Italia, Francia e Inglaterra. Para esta época tuvo gran
+                influencia la disruptiva ciencia cartesiana desarrollada por René Descartes -padre de la filosofía
+                moderna- al presentar un nuevo paradigma filosófico y científico que fue publicado en el “Discurso del
+                método para dirigir bien la razón y buscar la verdad en las ciencias” en 1637, donde la idea era
+                caracterizada por fundamentar en la materia y el movimiento por medio de fuerzas, la explicación a los
+                fenómenos naturales y el universo, pensamiento que lo llevaron incluso a crear una nueva área dentro de
+                las matemáticas, la geometría analítica en torno a 1628 a través de la obra “La géométrie”, con la que
+                había experimentado el gran potencial de los temas en su obra al resolver un problema planteado por
+                Pappus de Alejandría con suma facilidad. Su obra tuvo gran valor al lograr hacerle frente al estudio de
+                curvas, las secciones cónicas, ecuaciones cuadráticas y normales y tangentes.<br><br>
+                Uno de los más grandes desarrollos matemáticos posteriores a la geometría analítica, es el estudio del
+                cálculo infinitesimal desarrollado en el siglo XVIII, pero antes del desarrollo matemático realizado en
+                esta área por Newton, cabe resaltar a John Wallis, estudioso del análisis infinitesimal en el siglo
+                XVII, considerado uno de los más importantes matemáticos antes de Newton. Desarrollo fórmulas que, para
+                el cálculo de áreas bajo una curva, estudio sobre los factoriales y la función gamma que después sería
+                desarrollada por Euler. Ya en el siglo XVIII, Newton desarrolla el método de fluxiones para el estudio
+                de cálculos infinitesimales en las que consideraba cantidades como flujos - de allí el nombre
+                “fluxiones”, publicado en 1742, en respuesta a la necesidad de cálculos de movimientos astronómicos.
+                Tanto Newton como Leibniz, por separado logran desarrollar el cálculo infinitesimal de forma racional,
+                lógica y con geometría analítica. El enfoque de Newton fue principalmente en aplicaciones físicas y el
+                de Leibniz en problemas geométricos como la determinación de mínimo y máximos de una función. Leibniz,
+                hace un gran aporte den la notación de los procesos de cálculo para una mayor facilidad de resolución.
+                Este cálculo desarrollado se enfocaba en la resolución de la tangencia a una curva, para lo que el
+                cálculo diferencial se requería, y hallar el área bajo una curva que se desarrollaba con e cálculo
+                integral. Posterior a estos dos matemáticos, Euler fundamenta y formaliza el análisis como área de las
+                matemáticas, dotándola de definiciones, relaciones, notaciones y estudios compilados en tratados. Además
+                de estos trabajos, Euler desarrollo 800 trabajados, 500 libros, contribuyo a otras ramas matemáticas,
+                resolvió problemas abiertos a la época, estudio series convergentes y divergentes, desarrollo las
+                identidades que relacionan el número transcendental que lleva su nombre con la unidad imaginaria y el
+                número Pi. <br><br>
+                Paralelamente en esta época, en 1713, Jacques Bernoulli publica “Arte de la conjetura” que abarca la
+                teoría de probabilidades con un estudio general de permutaciones y combinaciones junto con aplicaciones
+                del método de inducción matemática. Dentro de esta obra se halla el famoso teorema de Bernoulli “Ley de
+                los grandes números”. Además, se desarrollaba en más profundada la teoría de números, los inicios de la
+                idea de límite y la geometría analítica tridimensional. Durante esta época moderna de las matemáticas la
+                dirección de las matemáticas en sus diversas áreas fue guiada por diversas mentes de toda Europa,
+                descentrándose el progreso en un foco geográfico como en la antigüedad. <br><br></p>
+            <h4>Edad Contemporánea </h4>
+            <p>A finales del siglo XVIII, la revolución francesa sacude la política, la sociedad y las matemáticas.
+                Durante en fervor de la revolución se crea el sistema métrico decimal, una generalización para la
+                medición. En esta época nace también la geometría descriptiva que convertía el dibujo técnico en
+                ciencia. Lagrange lleva la mecánica a un plano algebraico, mientras Laplace construía la mecánica
+                celeste y funda la teoría moderna de la probabilidad. Legendre fija la geometría elementa y explora
+                integrales elípticas, y Carnot reflexionaba sobre los fundamentos del cálculo. Era la época en la que la
+                matemática se institucionalizaba, se volvía herramienta del Estado y adquiría un rigor que marcaría el
+                siglo XIX.<br><br>
+                Bajo este escenario surge una nueva generación de matemáticos que redefine la materia. Gauss, apodado el
+                "Príncipe de los Matemáticos", publica unos trabajos donde establece la aritmética de las congruencias y
+                la ley de reciprocidad cuadrática, y demuestra el teorema fundamental del álgebra, introduce la
+                representación gráfica de los números complejos y aplica el método de mínimos cuadrados para resolver
+                problemas astronómicos, uniendo teoría y práctica. Por otra parte, Cauchy, convierte el análisis en una
+                ciencia rigurosa definiendo límites y continuidad, organiza la teoría de series y funda la teoría de
+                funciones de variable compleja. Con ellos, la matemática deja de ser solo herramienta y se convierte en
+                sistema lógico, preparando el terreno para la revolución geométrica. Lobachevski y Bolyai, rompen el
+                dogma euclidiano y crean la geometría hiperbólica, Rienmann da un paso más al concebir la geometría como
+                estudio de espacios curvos. La geometría deja de ser la ciencia del espacio físico y se convierte en una
+                teoría abstracta. En este punto el análisis se aritmetiza al dejar de apoyarse en instituciones
+                geometría y se funda en lógica y número.<br><br>
+                Paralelamente, el álgebra pasa a resolver ecuaciones y se convierte en el lenguaje de las estructuras.
+                Booble y De Morgan transforman la lógica en álgebra, anticipando la era digital. El álgebra se emancipa
+                y se vuelve abstracta, preparando la axiomatización del siglo XX. Hilbert propone axiomatizar toda la
+                matemática, esto entra en conflicto con las ideas demostrados por Gödel donde que no todo puede ser
+                demostrado, dando la incompletitud que marca los límites del formalismo. <br><br>
+                De esta forma la matemática deja de ser un conjunto de técnicas dispersas para convertirse en una
+                estructura coherente y universal. Desde institucionalización revolucionaria hasta la axiomatización del
+                siglo XX, la disciplina se ha transformado en el lenguaje y método para toda la ciencia. El análisis se
+                aritmetizó, la geometría se liberó del espacio físico, el álgebra se volvió abstracta y la lógica
+                penetró en sus fundamentos. Así la contemporaneidad no cierra con respuestas definitivas, sino con una
+                conciencia crítica.<br><br>
+                En el siglo XXI, la matemática ha logrado integrar otras materias, tecnológicas y globalizarse. Su papel
+                es central en la inteligencia artificial, análisis de datos masivos (Accadem Universidad, 2023),
+                criptográfica y modelización de sistemas complejos, apoyándose en potentes herramientas computacionales.
+                Las investigaciones exploran fronteras como la topología general (Camargo & Villamizar, 2025), la teoría
+                de redes y la matemática computacional. Hoy la matemática mantiene su esencia como lenguaje universal,
+                pero se proyecta como motor de innovación científica y tecnológica en un mundo cada vez más
+                conectado.<br><br></p>
+
+            </p>
+        </section>
+
+        <section id="creditos" class="section" aria-labelledby="cred-title">
+            <h2 id="cred-title">Contacto</h2>
+            <div class="credits">
+                <p>Este blog ha sido desarrollado de manera colaborativa por el grupo académico 551104_32 de la UNAD, en
+                    el marco del curso Historias de las Matemáticas.</p>
+                <p>Cada integrante del grupo aportó en la construcción de biografías, recursos digitales y programas
+                    magacín, con el propósito de divulgar la importancia de la historia de las matemáticas y sus
+                    protagonistas.</p>
+            </div>
+            <div class="footer">© II Semestre, 2025 Matemáticas con Historia Versión de Prueba 1.2<br>Grupo académico
+                551104_32 – Curso: Historias de las Matemáticas</div>
+        </section>
+    </main><!-- Modal -->
+    <div class="modal-overlay" id="modal" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="modal" role="document">
+            <div class="head">
+                <div style="display:flex;gap:12px;align-items:center"><img id="modalImg" src="" alt="">
+                    <div>
+                        <h3 id="modalName"></h3>
+                    </div>
+                </div>
+                <div><button class="close-btn" id="closeModal" aria-label="Cerrar biografía">✕</button></div>
+            </div>
+            <div class="body" id="modalBody" tabindex="0"><!-- Biografía completa irá aquí --></div>
+        </div>
+    </div>
+    <script>(() => { const menuBtn = document.getElementById('menuBtn'); const nav = document.getElementById('primary-nav'); menuBtn.addEventListener('click', () => { const expanded = menuBtn.getAttribute('aria-expanded') === 'true'; menuBtn.setAttribute('aria-expanded', String(!expanded)); nav.classList.toggle('show'); }); document.querySelectorAll('.nav-link').forEach(l => { l.addEventListener('click', e => { e.preventDefault(); const id = l.getAttribute('href').slice(1); document.getElementById(id).scrollIntoView({ behavior: 'smooth', block: 'start' }); if (window.innerWidth <= 720) { nav.classList.remove('show'); menuBtn.setAttribute('aria-expanded', 'false'); } }) }); const darkToggle = document.getElementById('darkToggle'); const heroImg = document.getElementById('heroImg'); const body = document.body; const DARK_IMG_PATH = './img/inicioOscuro.png'; const LIGHT_IMG_PATH = './img/inicio.png'; function setDark(on) { if (on) { body.classList.add('dark'); darkToggle.textContent = 'Modo claro'; darkToggle.setAttribute('aria-pressed', 'true'); heroImg.src = DARK_IMG_PATH; } else { body.classList.remove('dark'); darkToggle.textContent = 'Modo oscuro'; darkToggle.setAttribute('aria-pressed', 'false'); heroImg.src = LIGHT_IMG_PATH; } } darkToggle.addEventListener('click', () => { setDark(!body.classList.contains('dark')); });/* Biografías modal */const modal = document.getElementById('modal'); const modalImg = document.getElementById('modalImg'); const modalName = document.getElementById('modalName'); const modalBody = document.getElementById('modalBody'); const closeModal = document.getElementById('closeModal'); const bios = { tales: { name: 'Tales de Mileto', img: './img/tales.jpg', bio: 'Tales, nació en la ciudad de Mileto perteneciente en aquel entonces a Grecia, en la región jónica (actualmente en Turquía) en el año 626/625 a.C. Durante la vida de Tales, Mileto estaba gobernada por el tirano Trasíbulo, quién impulso las posiciones políticas de aristócratas conservadores y burgueses banqueros de la ciudad, lo que dio por consecuencia una abundante actividad económica con Egipto, Crotona y Síbaris, e indirectamente con la red de comercio de Babilonia y Caldea. Es sabido que Tales de Mileto viajo a Egipto, Caldea y Babilonia, de donde llevo múltiples conocimientos matemáticos a Grecia, donde aplicó lo aprendido y lo impulso a desarrollar enunciados más elaborados o complementar ya existentes. <br><br> En el año 585 a.C., Tales logró predecir el eclipse solar que lo doto de basto reconocimiento y que casualmente detuvo una batalla entre lidios y medos. Bernabé y San Miguel (1988, 2006) coinciden en que, con los conocimientos desarrollados en Babilonia, antes de la trasmisión de estos, de probabilidades de posibles eventos basados en registros anteriores, es la forma en como Tales realizo la predicción del eclipse. <br><br> Ante los grandes cambios impulsados por el comercio marítimo, en Mileto nace la necesidad de organizar la sociedad de una manera racional e investigar como realizar las exploraciones con mayor precisión y facilidad, llaman sabios a quienes precisan las formas de adquirir estos nuevos conocimientos, de entre ellos se encuentra Tales, quien fue el primero de los Siete Sabios Griegos. Tales participo activamente en la política de Mileto mediante consejos, decisiones y aportes al desarrollo de militares. Tales, funda la primera escuela de Mileto con el objetivo de abarcar las necesidades de pensamiento, llevando a sus integrantes - dentro del cual se resalta Anaximandro como discípulo de Tales - a estudiar la astronomía náutica, cartografía y la geometría. Es de precisar en este punto la realización filosófica de Tales en la cosmología, pues dio al agua el papel de elemento fundamental del origen del universo y a la materia como ajena al sentido estricto de ser inerte.<br><br>Los nuevos desafíos náuticos requirieron el uso de diferentes instrumentos astronómicos llegados desde Caldea, como el pólos que usaban para fijar la ubicación de los astros y entre otros instrumentos que calculaban rutas de navegación. Tales de Mileto conoce esos instrumentos y les da un fundamento geométrico que explica su funcionamiento y por qué de precisión. El uso del razonamiento para encontrar el por qué, excluyendo el mito como explicación, dio el título en Tales como el primer filosofo, buscando exponer la naturaleza como origen y causa. A partir de esta forma de pensamiento, Tales realiza demostraciones de teoremas matemáticos utilizando métodos deductivos, entre los teoremas demostrados están:<br><br>Los ángulos opuestos por el vértice son iguales.<br><br>El trazo de un diámetro divide al círculo en dos partes iguales.<br><br>Cuando varias rectas paralelas interceptan dos rectas transversales, los segmentos que se forman sobre estas últimas son proporcionales entre sí.<br><br>Dado dos triángulos, en el que uno de ellos tiene dos ángulos y un lado iguales al otro triángulo, entonces son triángulos congruentes.<br><br>Un ángulo inscrito en una semicircunferencia es un ángulo recto.<br><br>Los ángulos de la base de un triángulo isósceles son iguales.<br><br>Como evidencia de estos trabajos matemáticos están los escritos por Eudemo de Rodas (320 a.C.) que, aunque perdidos, parte de la información fue salvada por Proclo (410- 485). Además, los escritos de Diógenes Laercio relatan las habilidades matemáticas de Tales al medir la altura de las pirámides de Guiza por medio de las sombras proyectadas. Cabe recalcar la influencia de los conocimientos ya formados por egipcios y babilonios en estas hazañas geométricas de Tales. No se puede afirmar que inspiraron sus teoremas, pero sí están en relación.<br><br>Persia, que era amenaza desde hace varios años para Mileto, donde Tales participo en le decisión de rechazo de un enfrentamiento bélico con los persas, logra la irrupción en la región por parte de Ciro y su general Harpago, buscando dominar la región jonia, marcando así el fin del apogeo económico, político y científico de Mileto, coincidiendo con los últimos años de Tales, donde algunos pasajes aislados relatan su muerte en Tenedos en el 546 a.C.' }, zenon: { name: 'Zenón de Elea', img: './img/zenon.jpg', bio: 'Zenón nació a principios del siglo V a.C. en la colonia griega Elea – actualmente ubicada en el sur de Italia –. Parménides, habitante de Elea, fundo la escuela Eleática, que divulgaba la filosofía monista que consistía en la realidad como una, constante y no divisible, saber nacido del intelecto puro y aislado de la experiencia. Siendo una idea contradecía por otros pensadores de la época al apoyarse en el cambio notable de la naturaleza y sus composiciones, su discípulo, Zenón, debate mediante el reductio ad absurdum los argumentos contrarios al monismo en una serie de paradojas que se recogen en su obra Epicheiremata, reflejando algo más que un soporte a Parménides es más una refutación al cambio de la realidad. El método deductivo usado por Zenón, en base a conclusiones contrarias hace que Aristóteles lo titule como le padre de la dialéctica y evidenciando ser uno de los primeros lógicos. Para este punto, se conoce a Zenón como ciudadano activo políticamente desempeñándose como pensador de labor por su posición en la escuela de Elea.<br><br>Aproximadamente a mitad del siglo V, Zenón causa un profundo impacto en Sócrates que lo conoce en un viaje conjunto con Parménides a Atenas. Platón, maestro del ateniense, describe la visita entorno a debates filosóficos, reconoce fama en la ciudad por la obra realizada por Zenón y sus célebres paradojas. Se describe en los escritos de Parménides de Platón, a un Zenón que apoya el monismo, rechazando la multiplicidad de sustancias. Algo de lo que difiere Aristóteles, sin definirlo como prularista o monista, sino más como un diverso lógico ambivalente que fue duramente contrario a las ideas de Parménides y sus opositores.<br><br>Dentro de las paradojas más relevante y que han logrado sobrevivir a nuestros días se resaltan varias, como el argumento de lo grande y lo pequeño establece que, si las cosas son muchas pueden ser grandes o pequeñas, algo pequeño que no tiene tamaño no altera a algo más grande si se añade, entonces no es nada, por otra parte si algo tiene tamaño se puede dividir en partes que poseen tamaño, si se dividen infinitamente implica que las partes poseen tamaño – son grandes – y son ilimitadas, este argumento se centra en la posibilidad de completar los procesos de división más no en la totalidad de las partes. Estos son argumentos que, desde la perspectiva de la filosofía de Parménides, sostiene el monismo.<br><br>La dicotomía es otra paradoja que consiste en la división del argumento en dos partes opuestas, si se quiere llegar hasta la línea de meta desde la salida, primero hay que llegar a la mitad del camino, luego a la mitad de lo que queda y así sucesivamente, esto conduce a atravesar un número ilimitado de secciones lo cual hace al movimiento imposible. Aristóteles por otra parte, reflexiona sobre esta paradoja en que el tiempo también es divisible y se puede recorrer un número infinito de secciones en un tiempo finito.<br><br>Una variación de la dicotomía es la famosa paradoja de Aquiles, que menciona a Aquiles como el corredor más veloz respecto a otro que tiene una ventaja inicial, donde Aquiles debe estar en el mismo punto de partida que el corredor más lento, pero este habrá recorrido más distancia para llegar a un nuevo punto, donde Aquiles se posicionara nuevamente, estas etapas se repiten continuamente. Aquiles llega a un punto donde estaba el corredor más lento, pero este ya habrá avanzado un poco más, así Aquiles nunca lo alcanzará. Algo que nuevamente aborda Aristóteles, resuelve que es una interpretación errada al interpretar que el corredor más lento siempre estará delante de Aquiles, pero el alcance que deberá realizar Aquiles está restringido al tiempo en el cual Aquiles no alcanza al corredor más lento, lo que eventualmente conduce a que las distancias se reduzcan y supere en un tiempo finito al más lento.<br><br>Otra paradoja de Zenón es de la flecha en un vuelo, que establece que un cuerpo en cada instante ocupa un espacio igual a sí mismo, por lo tanto, está en reposo y de ser así nunca se mueve. <br><br>De entre otra de sus famosas paradojas está la del Estadio o filas en movimiento, en la que hay tres conjuntos de cuerpos, el primero consta de cuatro cuerpos en reposo, el segundo conjunto de cuatro cuerpos en movimiento hacía la derecha y el tercero de igual cantidad de cuerpos se mueve en sentido contrario al anterior, ambos se mueven paralelamente al conjunto inicial en reposo. El movimiento e intervalo mínimo de tiempo es aquel en el que el movimiento respecto al conjunto en reposo representa la variación de posición de un solo cuerpo en ambos conjuntos que se desplazan. En un momento dado, cuando los tres cuerpos estén alineados, el primer cuerpo del tercer conjunto habrá recorrido dos unidades de cuerpo respecto al segundo conjunto, pero no se puede recorrer en un solo instante el doble de tiempo lo que concluye que la mitad del tiempo es igual al doble del tiempo. Aristóteles menciona el error en suponer que moverse junto a algo en reposo toma el mismo tiempo que moverse junto a algo que también se mueve.<br><br>Estas paradojas evidencian la alta capacidad de argumentación deductiva y razonamiento que había logrado Zenón, paradojas que pudieron relacionarse con el descubrimiento de los números inconmensurables y sentaron las bases de la dialéctica. Dicha habilidad jugo en su contra en su vida política, al pensar en conspirar en la caída del tirano de Elea, Nearco, quien lo condeno a tortura y muerte en el año 430 a.C., Diógenes Laercio relata haber atestiguado su muerte que fue aceptada por Zenón con valentía y heroísmo.' }, arquimedes: { name: 'Arquímedes de Siracusa', img: './img/arquimedes.jpg', bio: 'Arquímedes fue hijo del astrónomo Fidias del cuál pudo surgir el temprano interés del siracusano por la Matemática, Geometría, Física y Astronomía, nació en el 287 a.C. en Siracusa, ciudad ubicada en la isla de Sicilia al sur de Italia, entonces bajo influencia y el estado de Grecia, la ciudad estaba gobernada por el tirano Herón (o Hierón) II de Siracusa (306 a.C. – 215 a.C.) quién fue íntimo amigo y posible pariente de Arquímedes, lo fue así tanto que dedico su obra Arenario a Gelón, hijo de Herón. Roma, en pleno auge expansionista de su imperio, se moviliza hacia el oriente y el sur, por lo que Cartago, aliado posterior de Siracusa, ofrece resistencia.<br><br>Arquímedes en sus primeros años de formación viaja a la ciudad de Alejandría en Egipto, donde adquiere su realización matemática de la mano de pensadores importantes en la materia como Eratóstenes, quién era director de la biblioteca de Alejandría, y otros discípulos de Euclides, con quienes mantuvo contacto posteriormente a lo largo de su vida. Más tarde, allí en Egipto, emplea un invento atribuido a él para el riego de los cultivos que, a modo de un tornillo helicoidal giratorio dentro de un cilindro inclinado, es capaz de elevar agua mediante el giro del eje del aparato. Posteriormente regresa a Siracusa con una afición amplia por la Física y la Matemática, en especial por la Geometría.<br><br>En este punto, Arquímedes interpretó un rol de ingeniero militar utilizando su gran ingenio y comprensión física, algo que Herón II tomaría para sus consejos, estrategias y guías para las defensas de Siracusa, desempeñándose así Arquímedes dentro de la aristocracia y gobierno de la ciudad. Arquímedes realiza múltiples acontecimientos como la botadura de un navío con la fuerza de su brazo, apoyado con poleas y palancas, de donde surge la clásica frase escrita en una carta al tirano de Siracusa: “Dadme una palanca suficientemente larga, un punto de apoyo y moveré la Tierra”. Durante las campañas bélicas que posteriormente se producirían en Siracusa por estar aliada con Cartago, diseña la garra o manus ferrea como arma de defensa contra los barcos romanos, que permitía levantarlos por medio de poleas para luego soltarlos violentamente contra el agua, haciendo que se hundieran. Su amplio conocimiento sobre palancas hace que tenga atribuida la ley de la palanca, desarrollada por él bajo principios estáticos – en contraste a los peripatéticos – en la que se postula, a modo práctico de ejemplo de la idea en cuestión para esta lectura, un sistema simétrico en el que una palanca carga tres pesos iguales repartidos en los extremos y en el fulcro ubicado a mitad de la palanca, manteniéndose estable. <br><br>Otro principio físico que logra establecer es acerca de la hidrostática de los cuerpos que dicta que un cuerpo en un líquido se sumerge a medida que desplaza una cantidad de líquido de la misma cantidad de peso que el objeto que se sumerge, escrito en su tratado Sobre los Cuerpos Flotantes. Este conocimiento lo utilizo en una anécdota relatada por Vitruvio, arquitecto bajo el mando del emperador Augusto, en la que se relata que Herón consagro una corona de oro a los dioses, pero en su sospecha por honradez del orfebre y la fiabilidad de ser completamente del material encargado, puso a prueba la corona desafiando la mente de Arquímedes, quien ideo la forma de determinar si era pura o corrupta. Arquímedes decide sumergirla en agua para conocer la cantidad de agua desplazada, de forma semejante lo hizo con porciones de oro puro para imitar el peso de la corona, al desplazarse más agua en el caso de la corona que las piezas de oro se descubrió que la corona no era pura en oro. Historias, relatos y anécdotas que son puestas en duda en algunos aspectos por la posible tergiversación a lo largo de los años y exageración de los hechos, pero que sin duda caracterizan a Arquímedes con habilidades e intelecto único para su época.<br><br>A pesar de sus grandes hazañas prácticas, desde las escrituras de Plutarco, se describe a Arquímedes con un interés más correspondiente a sus obras matemáticas que sus logros mecánicos, pues para él fascinación radicaba en la generalidad o principios que gobernaban los fenómenos.<br><br>Respecto a sus obras, han llegado a nuestros días gracias a un manuscrito griego recogido en el siglo XVI que logró sobrevivir a lo largo de los siglos que es reproducción de otro. Dos de sus obras están estrechamente relacionadas con el Cálculo Integral e, implícitamente en este, el concepto de límite que se maneja en nuestros días. Uno de ellos se centra en hallar la razón entre la longitud de una circunferencia y su diámetro, respecto al primero calcula el perímetro de un polígono regular inscrito en la circunferencia y realiza el cociente con su diámetro. Repetidamente realiza el proceso con un polígono regular de mayores lados hasta que asemeje la forma de la circunferencia, otorgando una aproximación al número π al lograr restringirlo a un rango de valores. Inmediatamente, aplicando el concepto de área al procedimiento descrito anteriormente – denominado método de exhaución, que es de autoría de Eudoxo de Cnido–, es decir, inscribiendo un polígono regular que aumenta de lados sucesivamente hasta que su área se asemeje a la de un círculo, se obtiene el área del mismo. Otro uso del método fue realizado en las medidas de la parábola, específicamente la determinación de un segmento o área, inscribiendo varios segmentos que se aproximen a la forma de la parábola o polígonos inscritos, sea el caso respectivo. Dentro de los procesos necesarios, Arquímedes usaba métodos babilónicos para obtener raíces y medias aritméticas (Boyer, 1986). También logra determinar el área de un círculo como igual al área de un triángulo rectángulo en los que sus catetos son la medida de la circunferencia dada y su radio.<br><br>En otro de sus trabajos, logra dar el procedimiento de trisección del ángulo bajo la idea de espiral – que, aunque nombrada con su nombre, da autoría de este elemento a Conon de Alejandría (Boyer, 1986) –, que consistía en movimientos uniformes de una semirrecta que gira en torno a uno de sus extremos y mientras otro punto de la semirrecta la recorre desde su origen, resultando en una espiral. También, proporciona la relación entre el volumen de una esfera y un cilindro, siendo esta primero dos partes de tres del volumen del cilindro que lo circunscribe. Bajo esta rama de cuerpos también determina la superficie de una esfera como cuatro veces su círculo mayor.<br><br>Estos trabajos esconden un manera precisa y singular de pensar de Arquímedes que fue descubierta en 1906 gracias a un pergamino del siglo X, que él mismo título como El Método y está a forma de cartas dirigidas a Eratóstenes con proposiciones matemáticas con la particularidad en cómo ejecuta la realización de sus demostraciones al tener en cuenta el objetivo de la misma de manera prestablecida, lo que hoy conoceríamos como tesis al momento de realizar una demostración.<br><br>Entre otros de sus trabajos se encuentran volúmenes de poliedros, razonamientos aritméticos como la arenario, centros de gravedad de polígonos y cuerpos, óptica y astronomía. (Parra, 2008). Respecto a la astronomía se sabía que construía planetarios o simulaciones del movimiento de los planetas. (Boyer, 1986).<br><br>Tras la caída de Cartago, Siracusa es asediada entre los años 214 y 212 a.C., último año de vida de Arquímedes que es donde invento sus más famosas máquinas de guerra. Plutarco relata que el general romano Marcelo habría dado orden de perdón a la vida de los habitantes. Al momento de la irrupción en la ciudad, un soldado romano acude a Arquímedes para llevarlo ante su general, el siracusano sin estar enterado de la invasión, se rehúsa a marcharse, no sin antes finalizar una demostración matemática, por lo que es asesinado por el soldado ante la negativa, desobedeciendo a su general. Muere así Arquímedes a los 75 años y se cumple su última voluntad que es tallar en su tumba una esfera y un cilindro.' }, galileo: { name: 'Galileo Galilei', img: './img/galileo.jpg', bio: 'Florencia, capital administrativa y cultural del ducado de la Toscana en el siglo XVI, plena época caracterizada por el renacimiento de los saberes de la antigüedad. El ducado acogía importantes ciudades como Pisa, ciudad portuaria importante que vio nacer en el año 1564 del músico Vicenzo Galilei y Giulia Ammannati a uno de seis hijos, Galileo Galilei, familia que posteriormente se mudaría a la capital toscana para impulsar los estudios de Galileo a los 15 años, bajo tutoría privada e impartición religiosa en el monasterio Vallombrosa. Dada las condiciones culturales de la época, renacimiento humanista, su aprendizaje en esta primera etapa de su vida y posteriores habrán sido en base al desarrollo humano. Esto se basaba en diferentes habilidades como la gramática, literatura, filosofía e historia desde el entendimiento de los conocimientos grecorromanos guiados por el razonamiento humano, lo que impulsaría la reflexión y estudio de estos temas por medio de espacios creados y conocidos como universidades. Vicenzo vería un gran potencial en su hijo para la medicina, lo que lo impulsa a regresar a Pisa para que su hijo estudiase en el 1581 en la universidad de la ciudad. <br><br> A pesar de la negativa de Galileo por los estudios médicos, logró encontrar una dirección a sus intereses en las matemáticas y la física. Lo que hace que reemplace a sus 20 años de edad sus estudios por geometría y fenómenos naturales como el movimiento pendular. Posterior a sus estudios matemáticos sin culminar formalmente, realiza estudios sobre la caída de los objetos e hidrostática, con lo que una reputación y demostración de conocimientos, obtiene el título de profesor en la Universidad de Pisa. En base a estos estudios, cuestiona fuertemente el pensamiento Aristotélico, algo sensible en tiempos en que abundaban peripatéticos en la Iglesia Católica y en el mundo académico. A modo de ejemplo, Galileo determina que la caída de los objetos por la acción de una aceleración gravitacional no depende de la masa de los mismos – según anécdotas demostró en la torre inclinada de Pisa – y realiza estudios sobre el movimiento de los péndulos mediante experimentación, determinando la ley del péndulo relacionado con el isocronismo del péndulo en el que establece periodo, amplitud y aceleración en el movimiento pendular. <br><br> También realizo estudios sobre la dinámica de objetos cayendo por medio de planos para establecer las relaciones entre las velocidades de estos y sus trayectorias. Por medio de estos trabajos logra cuantificar el valor de la aceleración gravitacional. Gracias a estos estudios logra plantear posteriormente en 1604 las leyes del movimiento acelerado. Se debe resaltar que en sus esbozos, estudios e interpretaciones de estos fenómenos aplico la geometría para reintroducirla como fundamento y materia auxiliar para la construcción de la explicación de estos fenómenos. Es el caso del péndulo y de los planos inclinados, la relevancia geométrica es significativa al considerar la variación de ángulos y curvas, respectivamente. <br><br> Estas acciones contrarias a los pensamientos aristotélicos, sumado a una personalidad irónica y de aptitud para el debate, hacen que deba cambiar de universidad en 1592 a la Universidad de Padua. Allí adquiere fama al ser catalogado como excelso en su profesión de docente en materias de física, ingeniería y astronomía, fue este tiempo descrito como la mejor época de su vida personal. Libero aún más sus habilidades de escritura con diversos manuscritos sobre técnicas mecánicas. Además, brindó varias conferencias e incluso tutorías privadas, haciéndolo más reconocido. <br><br> Después de varios trabajos con enfoques militares y mecánicos hizo un estudio geométrico sobre el área bajo un arco de la curva cicloide, descrita como la curva formada por el movimiento de un punto de una circunferencia que rueda con velocidad uniforme sobre un plano horizontal. Realizó una aproximación bastante cerca pero no segura de su parte a dicha área, como un área posiblemente menor a tres veces el área de la circunferencia que produce la curva, algo que sería estudiado posteriormente por matemáticos franceses, italianos y su discípulo Evangelista Torricelli. <br><br> Más tarde, en el 1597 construye un compás geométrico militar que fue ampliamente comercializado generándole ingresos significativos, se usaba por ingenieros en estos ámbitos de artillería para hacer cálculos mentales con mayor facilidad. Dicho compás, en una de sus aplicaciones permite la división de un segmento en una cantidad deseada de partes iguales, algo que podía emplearse en el cambio de escala de dibujos e inclusive cálculos de interés compuesto. <br><br> En esta misma época Galileo mantiene correspondencia con Johannes Kepler donde expresaba su respaldo a la teoría formulada por Copérnico respecto al movimiento de los astros. En 1604 se abre debate respecto al modelo geocentrista y heliocentrista planteado inicialmente por Nicolás Copérnico. En el primero se comprendía el universo junto con las estrellas era inmutable, donde la tierra era el centro y los errantes giraban alrededor de él. En el modelo copernicano, los planetas giraban alrededor del Sol. Galileo en vista de demostrar la teoría heliocentrista, construye en Padua un telescopio usando cristales nuevos y desarrollados en Holanda para la observación de objetos distantes en mar, solo que Galileo apuntaría los lentes al cielo nocturno, logrando configurarlo para ampliar hasta 30 veces la imagen de los cuerpos. Conocimiento que compartió con fuerzas marítimas militares de Venecia y le valdría un puesto vitalicio en la universidad de Padua. De entre otros inventos a resaltar hechos por Galileo se destacan el microscopio compuesto (1624) y un termómetro con la ayuda sobre la comprensión del cambio de la densidad de los líquidos en función a la temperatura (1606). <br><br> En el libro Sidereus Nuncios (El mensajero sideral, traducido a varios idiomas) que le otorgo de aún más fama imprimió grandes descubrimientos como que la Luna no era una esfera perfecta, pues tenía montañas, colinas y cráteres. Encontró cuerpos orbitando a Júpiter – lunas galileanas – y estudio las fases de Venus que podían ser explicadas solo con el modelo heliocentrista. El libro entró en conflicto con una Iglesia Católica dirigida por el Papa Urbano VIII, que, aunque daba signos de amistad con Galileo, dio órdenes explicitas de tratar con especulación sus descubrimientos, lo que haría que se cohibiera de realizar nuevos comentarios públicos. <br><br> Aun así, realizó años después una nueva publicación titulada Dialogo sobre los dos principales sistemas mundiales, ptolemaico y copernicano en 1632. Dejaba implícito la teoría ptolemaica como errada. En su obra de 1638, Las dos nuevas ciencias, acerca de la dinámica, demuestra con precisión matemática que el movimiento de un proyectil que es afectado verticalmente por una aceleración traza una trayectoria en forma de parábola, dando una nueva aplicación a esta curva de las secciones cónicas después de varios siglos. <br><br> En vista de la rebeldía de Galileo contra a los conocimientos apoyados por la Iglesia, esta organización incluyó el libro dentro de la lista de escritos prohibidos al poco tiempo de la publicación como reprimenda inicial para luego iniciar un juicio contra Galileo por desobedecer las ordenes papales. Fue encontrado culpable de estar contra las sagradas escrituras, por lo que se le habría condenado a la privación de su libertad sin posibilidad de visitas ni con permisos de realizar la publicación de su último libro. Poco antes de su muerte, con sus discípulos Viviani y Torricelli realizan esbozos sobre el reloj de péndulo. Más tarde, muere en Arcetri a los 78 años, bajo la misma condena injusta y atroz de la Iglesia Católica, solitario y ciego en 1642. Aun así, años después, su legado perduraría con el tiempo y varias mentes brillantes posteriores resignificarían el valor de sus trabajos para darle el nuevo título de padre de la ciencia moderna.' }, descartes: { name: 'René Descartes', img: './img/descartes.jpg', bio: 'René Descartes nació en La Haya, actualmente el pueblo Descartes -nombre en honor al filósofo-, Francia, en 1596, fue hijo de Joachin Descartes - consejero en el parlamento inglés - y de Jeanne Brochard quien falleció años después de tuberculosis al poco tiempo de dar a luz a un nuevo hijo que también fallecería. A raíz de esto los primeros años de vida de Descartes estuvieron a cargo de su abuela, su infancia estuvo caracterizada por enfermedades respiratorias herencia de su madre y una delicada salud que Descartes supo sobrellevar y recuperarse hasta su vida adulta (Morillo, 2001, p. 12). Desde 1607 hasta 1615 estudio en el Colegio Real de la Flèche. Obligado a permanecer en cama en las mañanas por su enfermedad, donde aprovechaba su tiempo leyendo escritos militares, algo que podría haber sido influenciado por los conflictos militares de Europa de la época.<br><br>En la Universidad de Poitier, luego de su paso por el colegio, estudia Derecho, inicia su estudio de filosofía, y en este punto Descartes señalaría que las ambigüedades e incoherencias aprendidas eran productos de bases inestables, lo que lo conduce a reflexionar sobre el fundamento de la ciencia en las matemáticas y cambiar los paradigmas tradicionalistas de la filosofía. Estas razones lo motivaron a que se apartara del conocimiento adquirido para encontrar nuevos saberes, experiencias y reflexiones más elaboradas que lo llevarían a realizar viajes por Alemania, Países Bajos, Francia e Italia. En torno a sus 21 años, con su salud recuperada, se integra en las tropas holandesas para participar en la independencia de los Países Bajos -aunque durante su asistencia militar no entro en combates directos-. En 1618 conocería a Isaac Beeckman, un joven científico con el que tendría conversaciones sobre física y matemáticas, lo que le inspiraría para desarrollar las ideas de la fundamentación física, e incluso filosófica, en las matemáticas. Alrededor de 1619, Descartes descubre la formula poliédrica en función a los números de caras, vértices y aristas de un poliedro convexo (Boyer, 1988, p. 426). Años después regresa a París donde tiene reuniones con un círculo de científicos que critican las ideas aceptadas de tradiciones peripatéticas, lo que le conduciría a encaminarse por la física y la matemática, realizando estudios geométricos y algebraicos con razonamientos lógicos que lo condujeran a la reflexión de la construcción de un método científico universal con el cuál poder hallar un verdadero saber, método en el cual la filosofía junto con ideas matemáticas fundamentaría las bases de los conocimientos de otras disciplinas, como es el caso de la física.<br><br>Posterior a abandonar su vida militar, e inspirado por la realización de su método de filosofía, realiza viajes a Francia e Italia, elabora estudios de la óptica física donde establece la refracción de la luz y hace estudios de la moral posteriormente en 1628. A su vez en este año desarrolla una forma de hallar raíces de cualquier ecuación de tercer o cuarto grado usando la parábola.<br><br>Nuevamente en Países Bajos en 1633 escribe “Tratado del mundo” donde abunda más sobre sus trabajos ópticos y astronómicos acerca del movimiento de la tierra alrededor de sol, pero no realiza publicación alguna ya que a sus oídos llega la batalla heliocentrista que libra Galileo contra la iglesia, razón por la cuál es condenado Galileo. Esto hace que Descartes entre en conflicto y duda que los hallazgos contradigan la fe y la palabra de Dios, lo ve desde la perspectiva de una confusión entre el dialogo entre la física y la institución eclesiástica. Se cree que para estos días ya había creado la geometría analítica, dirigida a la construcción geométrica desde el lenguaje algebraico, dando una base geométrica a las operaciones del Álgebra y la Aritmética. Su escritura algebraica era mucho más elaborada, hasta el punto de que un estudiante actual podría entender sus escritos. Dentro de la geometría analítica define las variables y los parámetros constantes usando letras del alfabeto, los símbolos + y –, y la notación exponencial. Resuelve el problema de las tres y cuatro rectas de Pappus con gran agilidad usando sus nuevos métodos, lo que motivaría a Descartes a dar a conocer al mundo su invención a través de su obra “La Géométrie” dentro de los apéndices del Discurso del Método. “La Géométrie” contenía resolución geométrica de ecuaciones cuadráticas, cúbicas y cuárticas, junto con estudio de las curvas cónicas. En su obra plasma también la idea del plano cartesiano, titulado así actualmente en base al nombre Descartes, en el que en un sistema de ejes se podría representar por medio de puntos - surgidos de expresiones y resultados algebraicos - sus uniones, los segmentos, curvas, ecuaciones y formas cónicas.<br><br>Aun así, “La Géométrie” carecía de la rigurosidad con la que conocemos hoy la geometría analítica, pues había falta de formalidad en las coordenadas rectangulares, formulas de distancia, operaciones con segmentos, ángulos entre rectas, pendientes y formas canónicas de las curvas cónicas. Para estos años también le da espacio para estudiar y publicar otros trabajos físicos de óptica, geométricos, meteoros (Cordeiro da Silva, s.f.). y la publicación de ensayos de su método filosófico de fundamentación de investigación en 1637 titulado “Discurso del método para dirigir bien la razón y buscar la verdad en las ciencias”, obra que estaría acompañada de sus trabajos geométricos. Allí hacía énfasis en la deducción de verdades con base a una serie de instrucciones que parten desde la evidencia, pasando por el análisis, la deducción hasta llegar a la comprobación (National Geographic Historia, 2025), con esto planteaba la explicación del universo desde de la materia y el movimiento. En base estos tratados nace la ciencia cartesiana, la historia le daría el título de “El padre de la filosofía moderna” a Descartes.<br><br>Descartes apoyaba sus desarrollos matemáticos en las nociones ya desarrolladas hasta la fecha, no planteaba una redefinición como en el caso de la filosofía o en el método científico, pues estos a diferencia de la matemática, cambian en la medida de nuevos paradigmas, mientras que por parte de la matemática no es común eliminar nociones.<br><br>El éxito que había alcanzado Descartes en su filosofía y matemática, llegaron a oídos de los personajes más influyentes de Europa, aunque Descartes siempre tuvo el cuidado de evitar disputas directas con filósofos, científicos y la iglesia.<br><br>Con el objetivo de aprendizaje personal y la fundación de una academia, la reina Cristina de Suecia invita en 1649 a Descartes a mudarse a su país. Descartes acepta, pero el invierno de la región habría sido de gran dificultad para él, lo que habría despertado nuevamente problemas respiratorios hasta desarrollar neumonía, llevándolo a la muerte un año después de su instalación en la residencia en Suecia en Estocolmo.<br><br>Descartes deja un legado para la filosofía y la matemática sumamente importante que marco el paso de la Edad Media a la Modera, influencio el desarrollo de las humanidades y la relación geométrica-algebraica. Estos trabajos impactaron otros campos del conocimiento y son bases para la cultura científica.' }, newton: { name: 'Isaac Newton', img: './img/newton.jpg', bio: 'Isaac Newton nació al sur de Grantham, en 1642 luego de la muerte de su padre. Su infancia estuvo al cuidado de su abuela, fue educado en la escuela de Grantham hasta que su tío materno noto en Isaac habilidades intelectuales fuera de lo ordinario, lo que lleva a que inscriban al joven en el colegio Trinity College de la universidad de Cambridge a sus 19 años. Quienes conocieron a Newton en esta época lo describían como introvertido y callado.<br><br>Desde los inicios de su estudio superior en la universidad de Cambridge, mostro interés en la química, la matemática y la física, tuvo gran influencia en su desarrollo académico por lecturas de grandes matemáticos y físicos como Rene Descartes, Wallis, Fermat, Kepler y Galileo. En base a esto, lograría adquirir los conocimientos suficientes para realizar su propios escritos, descubrimientos y experimentos.<br><br>Dentro de sus primeros trabajos se encuentra un estudio de 1665 sobre funciones y series infinitas, a su vez en la Física en el mismo año, inicia a plantear las bases de las fluxiones como medidas que varían o “fluyen”. Un año después se gradúa del Trinity College y se ve obligado a estar en cuarentena en su casa en Grantham a causa de la peste bubónica que azotaba nuevamente a Inglaterra. Este periodo de aislamiento se caracterizo por grandes descubrimientos y estudios realizados por Newton. (Boyer, 1986, pp. 493-495)<br><br>Newton, desarrolla el teorema binomial en 1664 o 1665, titulado Binomio de Newton. Este teorema permite hallar los términos resultantes de desarrollar la potencia n, entera y positiva, de un binomio. Newton explica que para obtener el teorema se base indirectamente en un problema de cuadraturas que había visto en las obras de Wallis con el cálculo de áreas.<br><br>Respecto a las series infinitas, las definía más allá de las aproximaciones, consideraba a estas como una función que designaba una cantidad especifica que era igual a progresión continua. Su análisis de series infinitas lo llevo a descubrir que era similar al álgebra de cantidades finitas en la consistencia y las leyes matemáticas (Boyer, 1986, p. 497).<br><br>En su confinamiento también desarrolla el cálculo como una manera de hallar las tasas de variaciones mediante su método de fluxiones. Método que usa de definir los puntos máximos y mínimos de una función (Duque, 2022, p. 59). Newton y Leibniz discuten acerca de la autoría y desarrollo del Cálculo Infinitesimal. Cabe resaltar, que, aunque de manera paralela Newton y Leibniz desarrollan el Cálculo, se reconoce la independencia y los diferentes enfoques de sus trabajos, Newton contaba con registros anteriores a Leibniz en el desarrollo de esta área, aunque por parte de Leibniz, él hizo publicaciones anteriores a las publicaciones de Newton en referencia al Cálculo Infinitesimal. (Boyer, 1986, p.502)<br><br>Su idea de fluxiones nace en principio para calcular el movimiento de los cuerpos celestes, proporciona un método con el cuál dado un flujo entoces calcular su fluxión (derivada), se concibe esta idea como la relación de cambio entre las variables, en un contexto parcial de Newton, la relación de variación entre el tiempo y el desplazamiento de un objeto.<br><br>Newton se destacó por sus avances en óptica. Realizo experimentos con la luz construyendo el primer telescopio reflector. Se le reconoció sus aportes tanto en Matemáticas y en Física, al aceptársele como miembro de la Royal Society. La teoría que desarrollo sobre la luz y el color fue basada en la descomposición de la luz blanca en colores mediante primas. Uno de sus críticos acérrimos sobre sus trabajos de óptica fue Rober Hook, creando disputas hasta el punto en que Newton evitara realizar publicaciones sobre el tema físico hasta la muerte de Hooke en 1704.<br><br>En busca de explicar las leyes generales sobre el movimiento de los planetas, descubre la fuerza de atracción entre cuerpos y las relaciones inversamente proporcionales al cuadrado de la distancia entre ellos. Así logró explicar fenómenos como las órbitas de los planetas, las mereas y el movimiento de los objetos por la acción de lo que sería su teoría más famosa, la teoría de la gravedad. Esta teoría también fue desarrollada gracias al enfoque preciso sobre las leyes del movimiento de los objetos basadas en la inercia, relación entre fuerza y aceleración, y acción y reacción. (Hibbins, 2023).<br><br>En 1687 Newton, apoyado por Edmond Halley -astrónomo- hace la publicación de una de sus obras más importantes “Los Principios Matemáticos de la Filosofía Natural”. Con esta obra logró revolucionar la ciencia con la presentación de las leyes del movimiento y la teoría de la gravedad. Esto planteo las bases del pensamiento científico moderno hasta el siglo XX.<br><br>Newton era sumamente obsesivo con su trabajo, descuidaba su salud constantemente, de manera física como mental, de la que esta última tuvo un colapso en 1693 retirándose temporalmente para trabajar en la Casa de la Moneda como renovador del sistema monetario. Newton fallece en 1727, sus últimos años estuvieron caracterizados por estudios religiosos acerca de la Biblia.<br><br>Los numerosos trabajos de Newton transformaron la visión científica del mundo. Se sostuvo, como él decía, en hombros de gigantes como Copérnico, Galileo y Kepler. Hizo el método científico más rigurosos con la observación y verificación experimental. Demostró que el universo puede explicarse mecánicamente con precisión matemática. Su trabajo marco el fin de las ideas peripatéticas e inició la ciencia moderna, quedando entre las personas más significativas en la era de innovación científica.' } }; document.querySelectorAll('.ver').forEach(btn => { btn.addEventListener('click', () => { const key = btn.getAttribute('data-person'); const data = bios[key]; if (!data) return; modalImg.src = data.img; modalImg.alt = data.name; modalName.textContent = data.name; modalBody.innerHTML = data.bio; modal.style.display = 'flex'; modal.setAttribute('aria-hidden', 'false'); document.body.style.overflow = 'hidden'; modalBody.focus(); }); }); function closeBio() { modal.style.display = 'none'; modal.setAttribute('aria-hidden', 'true'); document.body.style.overflow = ''; } closeModal.addEventListener('click', closeBio); modal.addEventListener('click', e => { if (e.target === modal) closeBio(); }); document.addEventListener('keydown', e => { if (e.key === 'Escape' && modal.style.display === 'flex') closeBio(); });/* Ensure modal body scrolls if content long */modalBody.style.maxHeight = '70vh'; modalBody.style.overflowY = 'auto';/* Resource 2 placeholder - left empty as requested */document.getElementById('rec2link').addEventListener('click', e => { e.preventDefault(); alert('Enlace no asignado todavía.'); });/* Improve contrast in dark mode for images inside cards */const observer = new MutationObserver(() => { document.querySelectorAll('.card img').forEach(i => { i.style.filter = body.classList.contains('dark') ? 'brightness(0.95) contrast(1.05)' : '' }); }); observer.observe(document.body, { attributes: true, attributeFilter: ['class'] }); })();</script>
+</body>
+
+</html>s
