@@ -123,26 +123,7 @@
         <p>© II Semestre, 2025 Historia de las Matemáticas. Versión 1<br>
             Grupo académico 551104_32 – Curso: Historias de las Matemáticas</p>
     </footer>
-    <script>
-        async function updateCounter() {
-            const counterId = "551104_32"; // Cambia por tu propio ID
 
-            // Incrementa el contador en cada visita
-            await fetch(`https://api.countify.xyz/increment/${counterId}`, {
-                method: "POST"
-            });
-
-            // Obtiene el total actualizado
-            const response = await fetch(`https://api.countify.xyz/get-total/${counterId}`);
-            const data = await response.json();
-
-            // Muestra el total en el div
-            document.getElementById("visits").textContent = data.total;
-        }
-
-        // Ejecuta la función al cargar la página
-        updateCounter();
-    </script>
 
     <script src="./scripts/menu.js"></script>
     <script src="./scripts/darkMode.js"></script>
